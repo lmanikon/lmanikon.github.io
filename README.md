@@ -1,2 +1,3 @@
-# lmanikon.github.io
- Webpage
+---
+permalink: /index.html
+---
