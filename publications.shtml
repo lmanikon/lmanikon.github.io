@@ -1,0 +1,177 @@
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lydia Manikonda</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel"SHORTCUT ICON" href="rpilogo.png">
+<link href="lyds.css" rel="stylesheet"/>
+<!-- Latest compiled and minified CSS -->
+<style>
+#circle
+{
+border-radius:50% 50% 50% 50%;
+width:200px;
+height:200px;
+}
+</style>
+
+</head>
+
+<body lang="EN-US">
+
+<table align="center" border="0" cellpadding="8" width="70%">
+
+<tbody>
+
+<tr><td><br><br></td></tr>
+<tr>
+	<td width="80%">
+		<h1 align="left"> <br>
+		<b> Lydia Manikonda </b> </h1>
+	
+		<h3 align="center"> <br> <b>Rensselaer Polytechnic Institute</b> </h3>
+	</td>
+	<td width="20%">
+	<img src="LManikonda.jpeg" id="circle">
+	</td>
+</tr>
+
+<tr>
+	<td colspan="2" align="justify" valign="top"> <br>
+	<table width="100%">
+	<tbody>
+		<tr>
+			<td colspan="2" bgcolor="#993333"></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="justify">
+			<table width="100%">
+			<tbody>
+				<tr>
+					<td width="18%">
+						<p class="headlink">
+						&nbsp; &nbsp;
+						</p>
+					</td>
+					<td width="17%">
+						<p class="headlink">
+							<a href="https://lmanikon.github.io/"> <b> Home </b> </a> 
+						</p>
+					</td>
+					<td width="17%">
+						<p class="headlink">
+							<a href="https://lmanikon.github.io/publications.shtml"> <b> Publications </b> </a> 
+						</p>
+					</td>
+					<td width="17%">
+						<p class="headlink">
+							<a href="https://lmanikon.github.io/projects.shtml"> <b> Research </b> </a> 
+						</p>
+					</td>
+					<td width="17%">
+						<p class="headlink">
+							<a href="https://lmanikon.github.io/teaching.shtml"> <b> Teaching </b> </a> 
+						</p>
+					</td>
+					<td width="17%">
+						<p class="headlink">
+							<a href="https://lmanikon.github.io/press.shtml"> <b> Awards </b> </a> 
+						</p>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" bgcolor="#993333"></td>
+		</tr>
+	<tr>
+		<td><b>2020</b></br>
+			<ul class="a">
+				<li><font color="#337ab7">Lydia Manikonda</font>, Shailesh Divey, <i>Reddit: A Novel Online Financial Consultancy,</i> The AAAI-20 Workshop on Knowledge Discovery from Unstructured Data in Financial Services </li>
+				<li>Niharika Jain, Alberto Olmo, Sailik Sengupta, <font color="#337ab7">Lydia Manikonda</font>, Subbarao Kambhampati, <i>"Imperfect ImaGANation: Implications of GANs Exacerbating Biases on Facial Data Augmentation and Snapchat Selfie Lenses"</i>, Preprint arXiv arXiv:2001.09528 2020 [<a href="https://arxiv.org/pdf/2001.09528.pdf" style="text-decoration: none" target="_blank">pdf</a>]</li>
+			</ul>
+		</td>
+	</tr>
+	
+	<tr>
+		<td><b>2018</b></br>
+			<ul class="a">
+				<li>Nur Kamarudin, Vineeth Rakesh, Ghazaleh Beigi, <font color="#337ab7">Lydia Manikonda</font>, Huan Liu, <i>"A Study of Reddit -- Users Response to Rape"</i>, ASONAM, 2018, [<a href="" style="text-decoration: none" target="_blank">pdf</a>]</li>
+				<li><font color="#337ab7">Lydia Manikonda</font>, Ghazaleh Beigi, Huan Liu, Subbarao Kambhampati, <i>"Twitter for Sparking a Movement, Reddit for Sharing the Moment: #metoo through the Lens of Social Media"</i>, SBP-BRiMS 2018 (Also available on Preprint arXiv arXiv:1803.08022) [<a href="" style="text-decoration: none" target="_blank">pdf</a>]</li>
+				<li><font color="#337ab7">Lydia Manikonda</font>, Subbarao Kambhampati, <i>"Tweeting AI: Perceptions of Lay vs Expert Twitterati"</i>, International AAAI Conference on Web and Social Media, 2018, [<a href="tweetingai.pdf" style="text-decoration: none" target="_blank">pdf</a>]</li>
+				<li><font color="#337ab7">Lydia Manikonda</font>, Aditya Deotale, Subbarao Kambhampati, <i>"What's up with Privacy?: User Preferences and Privacy Concerns in Intelligent Personal Assistants  	"</i>, AAAI/ACM Conference on Artificial Intelligence, Ethics and Society (AIES) 2018 [<a href="lydia-ipaprivacy.pdf" style="text-decoration: none" target="_blank">pdf</a>]</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td><b>2017</b></br>
+			<ul class="a">
+				<li><font color="#337ab7">Lydia Manikonda</font>, Cameron Dudley, Subbarao Kambhampati, <i>"Tweeting AI: Perceptions of AI-Tweeters (AIT) vs Expert AI-Tweeters (EAIT)"</i>, 2017, Preprint arXiv:1704.08389 [<a href="https://arxiv.org/pdf/1704.08389.pdf" style="text-decoration: none" target="_blank">pdf</a>]</li>
+				<li><font color="#337ab7">Lydia Manikonda</font>, Tathagata Chakraborti, Kartik Talamadupula, Subbarao Kambhampati, <i>"Herding the Crowd: Using Automated Planning for Better Crowdsourced Planning"</i>, Human Computation Journal Vol 4, No 1 2017 [<a href="https://goo.gl/aqXUu5" style="text-decoration: none" target="_blank">pdf</a>]</li>
+				<li><font color="#337ab7">Lydia Manikonda</font>, Shirin Sohrabi, Biplav Srivastava, Kartik Talamadupula, Subbarao Kambhampati, <i>"Extracting Incomplete Planning Action Models from Unstructured Social Media Data to Support Decision Making"</i>, Workshop on Knowledge Engineering for Planning and Scheduling, ICAPS, 2017 [<a href="KEPS2017.pdf" style="text-decoration: none" target="_blank">pdf</a>]</li>
+				<li><font color="#337ab7">Lydia Manikonda</font>, Munmun De Choudhury, <i>"Modeling and Understanding Visual Attributes of Mental Health Disclosures in Social Media"</i>, <a href="https://chi2017.acm.org/" style="text-decoration: none" target="_blank">CHI 2017</a>&nbsp; [<a href="lydia_chi.pdf" style="text-decoration: none" target="_blank">pdf</a>]</li>
+				<li>A patent on "Learning personalized actionable domain models" from my IBM Watson internship -- IBM Docket No. YOR920170076US1 was filed in March 2017.</li>
+				<li>A patent on "Autonomous learning of actionable models from unstructured data" from IBM Watson Internship -- IBM Docket No. YOR920161597US1 was filed in January 2017.</li>
+				<li>Ece Kamar,<font color="#337ab7">Lydia Manikonda</font>, <i>"Complementing the Execution of AI Systems with Human Computation"</i>, AAAI Workshop on Crowdsourcing, Deep Learning and Artificial Intelligence Agents 2017 [<a href="KamarManikonda_aaaiw.pdf" style="text-decoration: none" target="_blank">pdf</a>]</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td><b>2016</b></br>
+			<ul class="a">
+				<li><font color="#337ab7">Lydia Manikonda</font>, Vamsi Meduri, Subbarao Kambhampati <i>"Tweeting the Mind and Instagramming the Heart: Exploring Differentiated Content Sharing on Social Media,"</i> International AAAI Conference on Web and Social Media, 2016 [<a href="icwsm2016.pdf" style="text-decoration: none" target="_blank">pdf</a>]</li>
+				<li><font color="#337ab7">Lydia Manikonda</font>, Heather Pon-Barry, Subbarao Kambhampati, <i>" Venting Weight: Analyzing the Discourse of an Online Weight Loss Forum"</i>, Proceedings of AAAI 2016 -- Workshop on World Wide Web and Population Health Intelligence 2016 [<a href="lydia-w3phi16.pdf" style="text-decoration: none" target="_blank">pdf</a>]</li>
+				<li><font color="#337ab7">Lydia Manikonda</font>, Ragav Venkatesan, Subbarao Kambhampati, Baoxin Li <i>"Trending Chic: Analyzing the Influence of Social Media on Fashion Brands,"</i> Preprint. arXiv:1512.01174 [<a href="lydia-trendingchic.pdf" style="text-decoration: none" target="_blank">pdf</a>]</li>
+			</ul>
+		</td>
+	</tr>
+
+	<tr>
+		<td><b>2014</b></br>
+			<ul class="a">
+				<li><font color="#337ab7">Lydia Manikonda</font>, Tathagata Chakraborti, Sushovan De, Kartik Talamadupula, Subbarao Kambhampati, <i>"AI-MIX: How a Planner Can Help Guide Humans Towards a Better Crowdsourced Plan"</i>, Proceedings of Innovative Applications of Artificial Intelligence (IAAI), Quebec City, July 2014 [<a href="iaai2014.pdf" style="text-decoration: none" target="_blank">pdf</a>]&nbsp;[<a href="iaai2014_slides.pdf" style="text-decoration: none" target="_blank">slides</a>]</li>
+				<li><font color="#337ab7">Lydia Manikonda</font>, Heather Pon-Barry, Subbarao Kambhampati, <i>"Discourse Analysis of User Forums in an Online Weight Loss Application"</i>, Proceedings of ACL Joint Workshop on Social Dynamics and Personal Attributes in Social Media, Baltimore, June 2014 [<a href="acl2014.pdf" style="text-decoration: none" target="_blank">pdf</a>]&nbsp;[<a href="acl2014_slides.pdf" style="text-decoration: none" target="_blank">slides</a>]</li>
+				<li><font color="#337ab7">Lydia Manikonda</font>, Yuheng Hu, Subbarao Kambhampati, <i>"Analyzing User Activities, Demographics, Social Network Structure and User-Generated Content on Instagram"</i>, Preprint. arXiv:1410.8099v1 2014 [<a href="https://arxiv.org/pdf/1410.8099.pdf" style="text-decoration: none" target="_blank">pdf</a>] </li>
+				<li><font color="#337ab7">Lydia Manikonda</font>, Tathagata Chakraborti, Sushovan De, Kartik Talamadupula, Subbarao Kambhampati, <i>"AI-MIX: How a Planner Can Help Guide Humans Towards a Better Crowdsourced Plan"</i>, Proceedings of the ICAPS Scheduling and Planning Applications Workshop (SPARK), Portsmouth, June 2014 [<a href="icaps2014.pdf" style="text-decoration: none" target="_blank">pdf</a>]&nbsp;[<a href="icaps2014_slides.pdf" style="text-decoration: none" target="_blank">slides</a>] </br><font color="orangered"><i>**Winner of the "People's Choice Award" for the best demo at ICAPS 2014!</i></font></li>
+				<li>Yuheng Hu, <font color="#337ab7">Lydia Manikonda</font>, Subbarao Kambhampati, <i>"What we Instagram: A First Analysis of Instagram Photo Content and User Types"</i>, Proceedings of 8th International AAAI Conference On Weblogs and Social Media (ICWSM), Ann Arbor, June 2014 [<a href="icwsm2014.pdf" style="text-decoration: none" target="_blank">pdf</a>] [<a href="http://www.wired.com/2015/05/instagram-filters/" style="text-decoration: none" target="_blank"><font color="orangered">Wired article</font></a>]</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td><b>2012</b></br>
+			<ul class="a">
+				<li>Shashi Shekhar, KwangSoo Yang, Venkata M.V. Gunturi, <font color="#337ab7">Lydia Manikonda</font>, Dev Oliver, Xun Zhou, Betsy George, Sangho Kim, Jeffrey M. R. Wolff, Qingsong Lu, <i>"Evacuation Route Planning Algorithms: A Retrospective,"</i> International Journal of Geographical Information Science (IJGIS), 2012 [<a href="ijgis2012.pdf" style="text-decoration: none" target="_blank">pdf</a>]</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td><b>2011</b></br>
+			<ul class="a">
+				<li>Ashish Garg, <font color="#337ab7">Lydia Manikonda</font>, Shashank Kumar, Vikrant Krishna, Shyam Boriah, Michael Steinbach, Vipin Kumar, Durga Toshniwal, Christopher Potter, Steven Klooster, <i>"A Model-Free Time Series Segmentation Approach for Land Cover Change Detection"</i>, NASA Conference on Intelligent Data Understanding (CIDU), 2011 [<a href="cidu2011.pdf" style="text-decoration: none" target="_blank">pdf</a>]&nbsp;[<a href="http://prezi.com/braw2unipjz1/model-free-segmentation/" style="text-decoration: none" target="_blank">slides</a>]</li>
+				<li><font color="#337ab7">Lydia Manikonda</font>, Raghvendra Mall, Vikram Pudi, Raghunath Rao, <i>"Mining Nutrition Survey Data"</i>, IEEE Symposium on Computational Intelligence and Data Mining, Paris, France, April 2011 [<a href="cidm2011.pdf" style="text-decoration: none" target="_blank">pdf</a>]</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td><b>2010</b></br>
+			<ul class="a">
+				<li><font color="#337ab7">Lydia Manikonda</font>, Ashish Mangalampalli, Vikram Pudi, <i>"UACI: Uncertain Associative Classifier for Object Class Identification"</i>, The 25th International Conference of Image and Vision Computing, Queenstown, New Zealand, November 2010 [<a href="ivcnz2010.pdf" style="text-decoration: none" target="_blank">pdf</a>]</li>
+				<li><font color="#337ab7">Lydia Manikonda</font>, Annu Tuli, Vikram Pudi, <i>"ProMax: A Profit Maximizing Recommendation System for Market Baskets"</i>, SIGAI Workshop on Emerging Research Trends in AI, 2010 [<a href="ertai2010.pdf" style="text-decoration: none" target="_blank">pdf</a>]</li>
+			</ul>
+		</td>
+	</tr>
+		<tr>
+			<td colspan="2" bgcolor="#993333"></td>
+		</tr>
+		
+	</tbody>
+</tbody>
+
+</table>
+
+</body>
+
+</html>
+
