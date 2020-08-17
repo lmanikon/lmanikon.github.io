@@ -1,0 +1,121 @@
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lydia Manikonda</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel"SHORTCUT ICON" href="rpilogo.png">
+<link href="lyds.css" rel="stylesheet"/>
+<!-- Latest compiled and minified CSS -->
+<style>
+#circle
+{
+border-radius:50% 50% 50% 50%;
+width:200px;
+height:200px;
+}
+</style>
+
+</head>
+
+<body lang="EN-US">
+
+<table align="center" border="0" cellpadding="8" width="70%">
+
+<tbody>
+
+<tr><td><br><br></td></tr>
+<tr>
+	<td width="80%">
+		<h1 align="left"> <br>
+		<b> Lydia Manikonda </b> </h1>
+	
+		<h3 align="center"> <br> <b>Rensselaer Polytechnic Institute</b> </h3>
+	</td>
+	<td width="20%">
+	<img src="LManikonda.jpeg" id="circle">
+	</td>
+</tr>
+
+<tr>
+	<td colspan="2" align="justify" valign="top"> <br>
+	<table width="100%">
+	<tbody>
+		<tr>
+			<td colspan="2" bgcolor="#993333"></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="justify">
+			<table width="100%">
+			<tbody>
+				<tr>
+					<td width="18%">
+						<p class="headlink">
+						&nbsp; &nbsp;
+						</p>
+					</td>
+					<td width="17%">
+						<p class="headlink">
+							<a href="https://lmanikon.github.io/"> <b> Home </b> </a> 
+						</p>
+					</td>
+					<td width="17%">
+						<p class="headlink">
+							<a href="https://lmanikon.github.io/publications.shtml"> <b> Publications </b> </a> 
+						</p>
+					</td>
+					<td width="17%">
+						<p class="headlink">
+							<a href="https://lmanikon.github.io/projects.shtml"> <b> Research </b> </a> 
+						</p>
+					</td>
+					<td width="17%">
+						<p class="headlink">
+							<a href="https://lmanikon.github.io/teaching.shtml"> <b> Teaching </b> </a> 
+						</p>
+					</td>
+					<td width="17%">
+						<p class="headlink">
+							<a href="https://lmanikon.github.io/press.shtml"> <b> Awards </b> </a> 
+						</p>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" bgcolor="#993333"></td>
+		</tr>
+	<tr>
+		<td><b>Causal Inference</b></br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td><b>Misinformation</b></br>
+			
+		</td>
+	</tr>
+	<tr>
+		<td><b>Human-in-the-loop Systems</b></br>
+		</td>
+	</tr>
+	<tr>
+		<td><b>Differentiated Content Sharing</b></br>
+		</td>
+	</tr>
+	
+		<tr>
+			<td colspan="2" bgcolor="#993333"></td>
+		</tr>
+		
+	</tbody>
+</tbody>
+
+</table>
+
+</body>
+
+</html>
+
