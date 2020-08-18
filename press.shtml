@@ -89,11 +89,13 @@ height:200px;
 	<tr>
 		<td><b>Press</b></br>
 			<ul class="a">
+			<li> Discussing COVID-19 and Unemployment on Spectrum News [<a href="spectrumNewsApr3.MP4"  style="text-decoration: none" target="_blank">Video URL</a>] </li>
+			<li> "Why Not Change the World?" RPI Podcast on Social Media and Artificial Intelligence [<a href="https://www.youtube.com/watch?v=_YnVxNvRi8g" style="text-decoration: none" target="_blank">LINK</a>] </li>
 			<li> Twelve Christian Women in Science You Should Know [<a href="https://www.christianitytoday.com/ct/2020/march/lydia-manikonda-computer-scientist-christian-women-in-scien.html" style="text-decoration: none" target="_blank">URL</a>] by <a href="https://www.christianitytoday.com/" style="text-decoration: none" target="_blank">Christianity Today </a></li>
-			<li> </li>
-			<li> </li>
-			<li> </li>
-			<li> </li>
+			<li> AI and Machine Learning in the context of Privacy -- State Press -- Arizona State University [<a href="https://www.statepress.com/article/2018/08/spscience-artificial-intelligence-and-machine-learning-can-improve-asu-students-lives" style="text-decoration: none" target="_blank">URL</a>]</li>
+			<li> Article on AI expertise and Twitter -- Network World[<a href="https://www.networkworld.com/article/3196564/tech-majority-disagrees-with-ai-warnings-from-hawkings-musk-and-gates.html" style="text-decoration: none" target="_blank">URL</a>]</li>
+			<li> Write up on our Instagram research -- <b>ABC news</b> [<a href="https://abcnews.go.com/Lifestyle/instagram-vast-favorite-themes-surprisingly-study-shows/story?id=26551891" style="text-decoration: none" target="_blank">URL</a>] </li>
+			<li> Article on our Instagram research -- <b>Wired</b> [<a href="https://www.wired.com/2015/05/instagram-filters/" style="text-decoration: none" target="_blank">URL</a>] </li>
 			
 			</ul>
 		</td>
@@ -102,8 +104,8 @@ height:200px;
 	<tr>
 		<td><b>Awards</b></br>
 			<ul class="a">
-			<li> People's Choice Award for Best Demonstration -- ICAPS 2020 [<a href="icaps2014award.jpg" style="text-decoration: none" target="_blank">Certificate</a>] </li>
-			<li> Best Reviewer Award -- ICWSM 2019</li>
+			<li> People's Choice Award for <b>Best Demonstration</b> -- ICAPS 2014 [<a href="icaps2014award.jpg" style="text-decoration: none" target="_blank">Certificate</a>] </li>
+			<li> <b>Best Reviewer</b> Award -- ICWSM 2019</li>
 			<li> <a href="https://furi.engineering.asu.edu/participant/deotale-aditya/">FURI mentee Aditya Deotale</a> won the FURI project poster contest 2018</li>
 			
 			</ul>
@@ -112,8 +114,8 @@ height:200px;
 	<tr>
 		<td><b>Service</b></br>
 			<ul class="a">
-			<li> Senior Program Committee member -- ICWSM 2020</li>
-			<li> </li>
+			<li> Senior Program Committee Member -- ICWSM</li>
+			<li> Program Committee Member -- ACL, NAACL, EMNLP, WebConf, WebScience, SDM</li>
 			<li> FURI Mentor at Arizona State University</li>
 			
 			</ul>
