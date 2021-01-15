@@ -89,6 +89,7 @@ height:200px;
 	<tr>
 		<td><b>2020</b></br>
 			<ul class="a">
+				<li>Benjamin D. Horne, Dorit Nevo, Sibel Adali, <font color="#337ab7">Lydia Manikonda</font>, and Clare Arrignton, <i>TailoringHeuristics and Timing AI Interventions for Supporting News Veracity Assessments</i>, Computers in Human Behavior Reports, 2020.</li>
 				<li>Brendan Cunha, <font color="#337ab7">Lydia Manikonda</font>, <i>An RNN-based Classifier to detect Misinformation in News Articles,</i> ICWSM Data Challenge, 2020 </li>
 				<li><font color="#337ab7">Lydia Manikonda</font>, Shailesh Divey, <i>Reddit: A Novel Online Financial Consultancy,</i> The AAAI-20 Workshop on Knowledge Discovery from Unstructured Data in Financial Services, 2020 </li>
 				<li>Niharika Jain, Alberto Olmo, Sailik Sengupta, <font color="#337ab7">Lydia Manikonda</font>, Subbarao Kambhampati, <i>"Imperfect ImaGANation: Implications of GANs Exacerbating Biases on Facial Data Augmentation and Snapchat Selfie Lenses"</i>, Preprint arXiv arXiv:2001.09528 2020 [<a href="https://arxiv.org/pdf/2001.09528.pdf" style="text-decoration: none" target="_blank">pdf</a>]</li>
