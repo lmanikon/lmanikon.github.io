@@ -87,10 +87,19 @@ height:200px;
 			<td colspan="2" bgcolor="#993333"></td>
 		</tr>
 	<tr>
+		<td><b>Spring 2021</b></br>
+			<ul class="a">
+			<li>MGMT 6560 (MGMT 4966): Introduction to Machine Learning Applications [<a href="https://spring2021introtoml.github.io/">Website</a>] </li>
+			<li>MGMT 6160 (MGMT 4160): Applied Analytics and Predictive Modeling [<a href="https://predictivemodeling.github.io/">Website</a>] </li>
+			</ul>
+		</td>
+	</tr>
+	
+	<tr>
 		<td><b>Spring 2020</b></br>
 			<ul class="a">
-			<li>MGMT 6560-02: Introduction to Machine Learning [<a href="https://rpi.analyticsdojo.com/">Website</a>] </li>
-			<li>MGMT 6160-02 (MGMT 4963-02): Applied Analytics and Predictive Modeling [<a href="https://predictivemodeling.github.io/">Website</a>] </li>
+			<li>MGMT 6560-02: Introduction to Machine Learning Applications </li>
+			<li>MGMT 6160-02 (MGMT 4963-02): Applied Analytics and Predictive Modeling  </li>
 			</ul>
 		</td>
 	</tr>
