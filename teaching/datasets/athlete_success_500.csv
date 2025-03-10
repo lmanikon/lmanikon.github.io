@@ -1,0 +1,501 @@
+AthleteID,Name,Age,Gender,Sport,Training Hours per Week,Years of Experience,Injury Count,Nutritional Score,Mental Resilience Score,Strength Score,Speed Score,Competition Wins,Success Indicator
+ATH0001,Athlete_1,26,Male,Swimming,23,19,1,94,72,97,98,15,1
+ATH0002,Athlete_2,22,Female,Tennis,14,19,3,70,89,79,54,27,1
+ATH0003,Athlete_3,23,Female,Tennis,9,12,4,50,65,86,95,6,1
+ATH0004,Athlete_4,33,Female,Basketball,23,20,2,84,57,55,73,21,1
+ATH0005,Athlete_5,35,Female,Swimming,21,20,2,81,73,62,99,15,1
+ATH0006,Athlete_6,29,Female,Tennis,19,15,1,65,54,82,64,0,0
+ATH0007,Athlete_7,26,Female,Track & Field,28,7,0,95,63,70,98,12,1
+ATH0008,Athlete_8,34,Male,Swimming,21,18,4,90,72,82,74,22,1
+ATH0009,Athlete_9,23,Female,Basketball,6,20,2,86,77,52,65,8,1
+ATH0010,Athlete_10,35,Male,Basketball,33,9,3,56,91,54,80,26,1
+ATH0011,Athlete_11,26,Female,Swimming,17,8,3,56,59,78,84,25,1
+ATH0012,Athlete_12,34,Female,Tennis,37,13,4,84,91,53,99,27,1
+ATH0013,Athlete_13,18,Male,Swimming,22,14,1,91,51,67,79,4,0
+ATH0014,Athlete_14,29,Male,Tennis,18,1,3,89,92,60,84,12,1
+ATH0015,Athlete_15,22,Male,Track & Field,24,9,5,85,77,100,76,1,0
+ATH0016,Athlete_16,18,Female,Swimming,29,8,4,51,82,84,90,12,1
+ATH0017,Athlete_17,18,Male,Track & Field,39,14,5,81,55,100,56,28,1
+ATH0018,Athlete_18,33,Female,Swimming,40,7,4,88,66,75,82,6,1
+ATH0019,Athlete_19,28,Male,Basketball,14,13,0,71,78,89,82,15,1
+ATH0020,Athlete_20,33,Female,Basketball,32,4,3,78,73,95,87,30,1
+ATH0021,Athlete_21,28,Female,Soccer,15,11,1,53,65,92,74,28,1
+ATH0022,Athlete_22,35,Male,Track & Field,23,6,5,65,51,52,51,30,1
+ATH0023,Athlete_23,25,Male,Soccer,9,1,2,98,89,64,75,9,1
+ATH0024,Athlete_24,28,Female,Swimming,30,13,4,75,100,86,93,0,0
+ATH0025,Athlete_25,32,Female,Swimming,14,2,0,84,54,76,95,17,1
+ATH0026,Athlete_26,19,Female,Swimming,9,12,0,73,77,80,77,25,1
+ATH0027,Athlete_27,19,Female,Tennis,38,17,1,58,89,96,81,7,1
+ATH0028,Athlete_28,27,Female,Basketball,39,2,5,52,92,61,67,0,0
+ATH0029,Athlete_29,32,Male,Soccer,16,13,2,88,65,84,90,0,0
+ATH0030,Athlete_30,29,Female,Basketball,40,5,0,63,97,84,89,7,1
+ATH0031,Athlete_31,35,Male,Tennis,33,19,0,74,86,58,89,30,1
+ATH0032,Athlete_32,30,Male,Tennis,39,14,2,100,71,62,71,12,1
+ATH0033,Athlete_33,22,Female,Soccer,18,5,3,66,99,67,97,22,1
+ATH0034,Athlete_34,31,Female,Soccer,15,9,1,55,91,80,71,30,1
+ATH0035,Athlete_35,21,Female,Basketball,16,16,5,91,69,81,67,27,1
+ATH0036,Athlete_36,25,Male,Swimming,13,11,5,59,69,96,63,15,1
+ATH0037,Athlete_37,33,Female,Soccer,32,13,5,88,59,57,71,24,1
+ATH0038,Athlete_38,29,Male,Soccer,36,5,3,95,100,66,55,27,1
+ATH0039,Athlete_39,30,Male,Tennis,29,5,0,90,73,73,66,11,1
+ATH0040,Athlete_40,27,Male,Track & Field,23,4,1,54,82,57,99,5,0
+ATH0041,Athlete_41,27,Female,Swimming,6,13,2,64,90,62,100,11,1
+ATH0042,Athlete_42,25,Female,Track & Field,23,2,3,66,83,77,100,30,1
+ATH0043,Athlete_43,18,Female,Tennis,14,2,2,56,63,60,78,4,0
+ATH0044,Athlete_44,28,Female,Swimming,29,5,2,95,77,51,78,22,1
+ATH0045,Athlete_45,22,Female,Track & Field,7,3,4,64,88,78,76,4,0
+ATH0046,Athlete_46,18,Female,Swimming,28,1,2,68,92,52,90,29,1
+ATH0047,Athlete_47,18,Male,Basketball,19,6,5,61,77,72,51,30,1
+ATH0048,Athlete_48,24,Female,Basketball,40,2,0,58,90,90,84,7,1
+ATH0049,Athlete_49,33,Female,Basketball,27,2,1,97,84,69,65,3,0
+ATH0050,Athlete_50,28,Male,Swimming,32,16,2,100,97,93,68,3,0
+ATH0051,Athlete_51,28,Female,Soccer,12,18,2,74,59,69,93,20,1
+ATH0052,Athlete_52,22,Male,Swimming,9,9,4,79,71,77,96,29,1
+ATH0053,Athlete_53,33,Female,Basketball,11,16,1,90,53,95,89,15,1
+ATH0054,Athlete_54,35,Female,Track & Field,31,17,4,52,86,75,80,18,1
+ATH0055,Athlete_55,34,Female,Soccer,15,8,5,79,73,96,54,14,1
+ATH0056,Athlete_56,23,Female,Tennis,26,8,3,86,73,78,92,9,1
+ATH0057,Athlete_57,25,Male,Track & Field,12,17,4,52,82,90,51,26,1
+ATH0058,Athlete_58,28,Female,Track & Field,9,6,4,97,86,63,92,13,1
+ATH0059,Athlete_59,28,Female,Basketball,25,11,2,94,86,95,87,27,1
+ATH0060,Athlete_60,31,Male,Swimming,14,18,1,65,59,93,99,14,1
+ATH0061,Athlete_61,30,Female,Basketball,6,18,0,63,87,52,78,18,1
+ATH0062,Athlete_62,27,Male,Track & Field,20,11,5,75,77,72,91,28,1
+ATH0063,Athlete_63,33,Male,Soccer,31,1,3,80,70,63,78,15,1
+ATH0064,Athlete_64,35,Male,Tennis,32,1,3,70,51,84,86,1,0
+ATH0065,Athlete_65,18,Male,Basketball,20,11,4,67,60,56,98,3,0
+ATH0066,Athlete_66,28,Male,Tennis,39,10,5,92,97,71,90,21,1
+ATH0067,Athlete_67,33,Male,Basketball,12,13,0,90,80,89,51,19,1
+ATH0068,Athlete_68,28,Male,Tennis,14,20,5,89,92,59,70,0,0
+ATH0069,Athlete_69,33,Female,Soccer,22,20,3,95,72,66,83,18,1
+ATH0070,Athlete_70,20,Male,Tennis,18,13,3,55,61,60,88,13,1
+ATH0071,Athlete_71,26,Female,Track & Field,6,4,0,79,78,99,80,26,1
+ATH0072,Athlete_72,26,Male,Swimming,34,12,5,97,72,55,87,15,1
+ATH0073,Athlete_73,24,Male,Track & Field,5,20,0,73,64,53,97,29,1
+ATH0074,Athlete_74,30,Male,Tennis,18,10,5,80,54,94,70,24,1
+ATH0075,Athlete_75,30,Female,Tennis,19,20,0,64,64,88,63,2,0
+ATH0076,Athlete_76,27,Male,Swimming,38,3,5,65,76,68,97,6,1
+ATH0077,Athlete_77,27,Female,Swimming,39,11,5,81,93,65,54,12,1
+ATH0078,Athlete_78,34,Female,Swimming,29,10,0,77,93,72,80,4,0
+ATH0079,Athlete_79,20,Male,Swimming,13,1,5,63,54,98,55,7,1
+ATH0080,Athlete_80,24,Male,Soccer,34,1,1,50,74,57,62,2,0
+ATH0081,Athlete_81,19,Female,Track & Field,40,8,5,82,100,53,55,23,1
+ATH0082,Athlete_82,30,Male,Swimming,40,10,1,78,55,61,50,19,1
+ATH0083,Athlete_83,23,Male,Tennis,5,12,1,61,99,59,99,27,1
+ATH0084,Athlete_84,25,Male,Basketball,9,10,4,88,88,92,84,7,1
+ATH0085,Athlete_85,33,Female,Basketball,37,9,3,91,66,60,93,19,1
+ATH0086,Athlete_86,21,Male,Swimming,8,12,3,51,76,54,87,15,1
+ATH0087,Athlete_87,30,Male,Basketball,15,16,0,71,50,85,70,0,0
+ATH0088,Athlete_88,21,Male,Swimming,16,12,4,53,86,53,97,18,1
+ATH0089,Athlete_89,33,Male,Track & Field,9,6,5,73,69,65,80,3,0
+ATH0090,Athlete_90,30,Male,Track & Field,11,16,3,73,64,50,93,22,1
+ATH0091,Athlete_91,34,Female,Track & Field,10,11,2,60,55,81,84,20,1
+ATH0092,Athlete_92,34,Male,Tennis,32,17,3,55,58,77,76,17,1
+ATH0093,Athlete_93,26,Female,Swimming,36,5,3,68,67,80,53,0,0
+ATH0094,Athlete_94,18,Male,Track & Field,7,14,1,53,88,65,83,29,1
+ATH0095,Athlete_95,24,Female,Swimming,26,3,1,83,60,79,60,7,1
+ATH0096,Athlete_96,27,Female,Basketball,12,1,3,66,52,60,80,24,1
+ATH0097,Athlete_97,33,Female,Swimming,31,2,2,68,97,72,98,7,1
+ATH0098,Athlete_98,26,Male,Track & Field,7,20,4,62,88,63,66,25,1
+ATH0099,Athlete_99,25,Female,Basketball,24,6,2,76,71,75,78,12,1
+ATH0100,Athlete_100,35,Female,Basketball,19,11,0,62,73,94,90,26,1
+ATH0101,Athlete_101,26,Male,Track & Field,35,13,2,83,91,54,88,14,1
+ATH0102,Athlete_102,34,Male,Track & Field,7,6,2,92,83,85,81,15,1
+ATH0103,Athlete_103,25,Male,Tennis,18,6,5,84,84,70,82,23,1
+ATH0104,Athlete_104,21,Male,Tennis,27,13,4,78,55,100,74,6,1
+ATH0105,Athlete_105,27,Female,Track & Field,33,14,1,59,66,63,93,26,1
+ATH0106,Athlete_106,24,Female,Tennis,16,9,4,77,54,67,99,21,1
+ATH0107,Athlete_107,32,Female,Swimming,12,1,0,91,63,65,84,9,1
+ATH0108,Athlete_108,30,Female,Basketball,13,13,5,81,67,82,84,23,1
+ATH0109,Athlete_109,26,Female,Track & Field,24,16,5,78,51,79,85,27,1
+ATH0110,Athlete_110,33,Female,Track & Field,15,10,4,94,70,57,93,12,1
+ATH0111,Athlete_111,34,Female,Basketball,34,11,4,85,74,55,76,27,1
+ATH0112,Athlete_112,26,Female,Basketball,9,5,5,100,75,81,65,25,1
+ATH0113,Athlete_113,27,Male,Swimming,33,17,0,75,54,64,60,19,1
+ATH0114,Athlete_114,33,Male,Track & Field,11,14,0,70,89,87,89,5,0
+ATH0115,Athlete_115,32,Male,Swimming,22,18,4,76,63,72,90,27,1
+ATH0116,Athlete_116,33,Male,Soccer,6,17,0,84,97,93,86,10,1
+ATH0117,Athlete_117,30,Female,Track & Field,20,3,2,79,60,90,93,29,1
+ATH0118,Athlete_118,23,Female,Swimming,28,10,1,53,56,74,55,26,1
+ATH0119,Athlete_119,27,Male,Track & Field,25,2,1,98,62,72,88,29,1
+ATH0120,Athlete_120,30,Female,Soccer,12,20,0,80,65,63,92,16,1
+ATH0121,Athlete_121,24,Female,Tennis,14,5,3,88,79,87,79,30,1
+ATH0122,Athlete_122,22,Female,Track & Field,28,15,2,53,82,64,97,5,0
+ATH0123,Athlete_123,33,Male,Swimming,12,7,4,57,52,95,71,10,1
+ATH0124,Athlete_124,25,Male,Swimming,13,3,1,95,85,65,58,13,1
+ATH0125,Athlete_125,30,Male,Swimming,16,2,3,100,96,57,100,3,0
+ATH0126,Athlete_126,32,Male,Swimming,28,16,0,65,75,97,63,26,1
+ATH0127,Athlete_127,22,Female,Basketball,36,14,5,50,74,72,90,5,0
+ATH0128,Athlete_128,24,Male,Tennis,24,20,3,73,55,54,87,21,1
+ATH0129,Athlete_129,34,Male,Tennis,13,12,0,64,88,84,58,15,1
+ATH0130,Athlete_130,32,Male,Basketball,18,2,3,72,95,90,58,18,1
+ATH0131,Athlete_131,26,Female,Swimming,36,1,1,76,59,50,56,23,1
+ATH0132,Athlete_132,33,Male,Tennis,12,9,0,97,95,53,65,28,1
+ATH0133,Athlete_133,24,Male,Tennis,23,1,5,65,54,70,95,1,0
+ATH0134,Athlete_134,24,Female,Swimming,15,20,5,92,69,90,86,9,1
+ATH0135,Athlete_135,29,Female,Basketball,20,10,1,86,73,70,65,22,1
+ATH0136,Athlete_136,27,Female,Soccer,7,11,2,53,70,96,76,11,1
+ATH0137,Athlete_137,30,Male,Basketball,5,20,4,91,87,88,53,5,0
+ATH0138,Athlete_138,25,Female,Track & Field,33,11,5,70,58,78,81,30,1
+ATH0139,Athlete_139,28,Female,Track & Field,16,19,3,86,98,95,53,22,1
+ATH0140,Athlete_140,25,Male,Basketball,22,2,3,82,63,95,76,7,1
+ATH0141,Athlete_141,34,Female,Tennis,15,4,4,56,58,85,84,8,1
+ATH0142,Athlete_142,35,Male,Soccer,23,15,5,67,76,87,56,9,1
+ATH0143,Athlete_143,21,Male,Track & Field,38,5,5,61,52,92,80,8,1
+ATH0144,Athlete_144,32,Male,Track & Field,32,2,0,73,70,54,73,1,0
+ATH0145,Athlete_145,30,Male,Track & Field,11,4,1,92,57,88,95,20,1
+ATH0146,Athlete_146,24,Female,Track & Field,29,19,5,74,80,50,63,23,1
+ATH0147,Athlete_147,26,Female,Track & Field,14,18,5,78,97,63,54,9,1
+ATH0148,Athlete_148,25,Female,Track & Field,20,17,2,77,64,66,70,2,0
+ATH0149,Athlete_149,18,Female,Track & Field,32,11,2,61,66,94,62,1,0
+ATH0150,Athlete_150,34,Female,Soccer,27,10,0,66,73,97,96,4,0
+ATH0151,Athlete_151,31,Female,Track & Field,23,2,3,89,78,83,95,11,1
+ATH0152,Athlete_152,19,Male,Tennis,31,14,3,100,69,77,75,21,1
+ATH0153,Athlete_153,27,Male,Soccer,17,12,2,66,65,91,69,5,0
+ATH0154,Athlete_154,20,Male,Tennis,18,17,1,79,83,91,53,15,1
+ATH0155,Athlete_155,35,Female,Swimming,30,18,3,92,82,62,55,11,1
+ATH0156,Athlete_156,23,Male,Soccer,13,11,5,88,84,72,81,21,1
+ATH0157,Athlete_157,19,Female,Track & Field,37,20,5,91,75,96,63,10,1
+ATH0158,Athlete_158,26,Female,Basketball,7,7,5,92,89,91,70,28,1
+ATH0159,Athlete_159,19,Female,Swimming,20,2,2,100,94,84,68,18,1
+ATH0160,Athlete_160,19,Female,Soccer,21,18,2,73,83,89,98,8,1
+ATH0161,Athlete_161,25,Female,Track & Field,34,13,2,77,66,66,91,28,1
+ATH0162,Athlete_162,18,Female,Track & Field,38,2,0,68,51,97,63,0,0
+ATH0163,Athlete_163,20,Male,Track & Field,14,17,5,81,90,52,93,27,1
+ATH0164,Athlete_164,24,Female,Tennis,39,7,1,88,76,88,55,19,1
+ATH0165,Athlete_165,22,Female,Tennis,28,16,4,81,84,54,72,30,1
+ATH0166,Athlete_166,25,Male,Swimming,16,8,5,84,75,58,95,6,1
+ATH0167,Athlete_167,23,Male,Basketball,31,2,4,100,50,93,81,21,1
+ATH0168,Athlete_168,26,Female,Tennis,21,5,3,69,94,58,70,9,1
+ATH0169,Athlete_169,19,Female,Basketball,11,11,2,66,59,55,73,7,1
+ATH0170,Athlete_170,35,Female,Swimming,25,7,2,71,87,61,99,30,1
+ATH0171,Athlete_171,23,Male,Basketball,22,14,0,54,66,71,88,14,1
+ATH0172,Athlete_172,25,Male,Track & Field,17,11,0,79,65,62,75,4,0
+ATH0173,Athlete_173,34,Female,Basketball,12,4,0,76,81,87,96,9,1
+ATH0174,Athlete_174,19,Female,Swimming,27,20,2,86,54,91,53,22,1
+ATH0175,Athlete_175,26,Male,Tennis,16,7,2,84,50,87,96,21,1
+ATH0176,Athlete_176,20,Male,Soccer,16,4,3,94,86,89,64,17,1
+ATH0177,Athlete_177,22,Male,Tennis,15,7,2,91,53,98,69,24,1
+ATH0178,Athlete_178,25,Male,Track & Field,8,7,0,91,93,56,54,9,1
+ATH0179,Athlete_179,23,Female,Tennis,33,1,5,88,87,68,55,7,1
+ATH0180,Athlete_180,33,Male,Tennis,24,10,3,89,97,67,68,5,0
+ATH0181,Athlete_181,21,Male,Tennis,14,3,3,71,73,84,67,2,0
+ATH0182,Athlete_182,33,Female,Tennis,13,18,1,79,96,50,98,3,0
+ATH0183,Athlete_183,35,Male,Swimming,36,11,2,59,54,97,56,1,0
+ATH0184,Athlete_184,19,Male,Track & Field,36,5,4,79,73,75,55,0,0
+ATH0185,Athlete_185,22,Male,Soccer,35,8,1,83,71,90,72,6,1
+ATH0186,Athlete_186,30,Male,Basketball,17,7,3,76,84,66,59,5,0
+ATH0187,Athlete_187,33,Male,Tennis,16,16,0,81,84,98,58,0,0
+ATH0188,Athlete_188,30,Female,Tennis,7,14,5,86,87,87,71,28,1
+ATH0189,Athlete_189,33,Male,Swimming,13,1,3,76,75,95,72,4,0
+ATH0190,Athlete_190,30,Female,Tennis,18,19,0,91,83,86,96,18,1
+ATH0191,Athlete_191,29,Male,Swimming,35,1,0,50,63,77,51,28,1
+ATH0192,Athlete_192,35,Male,Soccer,20,1,2,84,83,76,88,6,1
+ATH0193,Athlete_193,28,Female,Soccer,14,20,1,52,87,65,88,7,1
+ATH0194,Athlete_194,29,Male,Basketball,25,1,1,94,70,98,74,8,1
+ATH0195,Athlete_195,35,Female,Track & Field,13,14,0,85,91,95,57,15,1
+ATH0196,Athlete_196,28,Male,Tennis,31,5,3,66,60,98,63,6,1
+ATH0197,Athlete_197,19,Male,Basketball,39,2,0,73,68,74,90,1,0
+ATH0198,Athlete_198,30,Male,Swimming,11,1,4,60,93,82,87,2,0
+ATH0199,Athlete_199,30,Male,Swimming,5,6,5,82,80,93,83,5,0
+ATH0200,Athlete_200,27,Male,Tennis,31,17,1,69,67,50,60,3,0
+ATH0201,Athlete_201,18,Female,Basketball,9,7,4,86,90,63,73,26,1
+ATH0202,Athlete_202,32,Male,Tennis,25,1,2,72,62,72,70,12,1
+ATH0203,Athlete_203,31,Female,Tennis,29,17,1,87,82,88,74,19,1
+ATH0204,Athlete_204,33,Male,Basketball,13,8,2,93,91,51,95,29,1
+ATH0205,Athlete_205,21,Female,Tennis,29,13,5,60,85,64,73,13,1
+ATH0206,Athlete_206,24,Male,Basketball,22,12,2,56,89,100,97,13,1
+ATH0207,Athlete_207,32,Male,Swimming,22,8,2,82,93,77,51,19,1
+ATH0208,Athlete_208,31,Male,Track & Field,24,16,3,69,63,70,57,8,1
+ATH0209,Athlete_209,33,Male,Soccer,13,10,3,60,53,59,70,3,0
+ATH0210,Athlete_210,28,Female,Tennis,26,11,5,62,66,93,92,4,0
+ATH0211,Athlete_211,21,Female,Soccer,36,5,3,70,96,56,66,24,1
+ATH0212,Athlete_212,20,Female,Track & Field,39,13,4,68,76,51,86,23,1
+ATH0213,Athlete_213,24,Male,Swimming,34,4,3,79,57,57,99,8,1
+ATH0214,Athlete_214,29,Female,Basketball,19,14,4,96,54,83,85,0,0
+ATH0215,Athlete_215,29,Female,Track & Field,39,8,0,52,70,64,95,26,1
+ATH0216,Athlete_216,26,Male,Soccer,21,12,3,61,50,96,85,25,1
+ATH0217,Athlete_217,34,Female,Tennis,17,4,1,95,69,61,60,23,1
+ATH0218,Athlete_218,26,Female,Basketball,36,2,2,92,61,96,77,26,1
+ATH0219,Athlete_219,28,Male,Swimming,23,13,5,56,88,76,92,26,1
+ATH0220,Athlete_220,26,Male,Swimming,26,14,2,100,83,83,65,14,1
+ATH0221,Athlete_221,23,Female,Track & Field,16,17,0,96,62,68,53,17,1
+ATH0222,Athlete_222,32,Female,Track & Field,16,17,4,72,69,53,57,19,1
+ATH0223,Athlete_223,34,Female,Basketball,32,1,5,69,57,70,76,7,1
+ATH0224,Athlete_224,27,Female,Swimming,7,11,2,59,99,82,99,7,1
+ATH0225,Athlete_225,24,Female,Basketball,20,13,2,96,65,69,52,7,1
+ATH0226,Athlete_226,21,Male,Track & Field,15,20,5,65,62,72,73,19,1
+ATH0227,Athlete_227,19,Female,Track & Field,6,20,4,98,67,63,61,5,0
+ATH0228,Athlete_228,35,Female,Track & Field,33,17,5,91,76,52,91,10,1
+ATH0229,Athlete_229,28,Female,Basketball,24,18,5,56,93,100,73,16,1
+ATH0230,Athlete_230,27,Female,Basketball,24,15,5,60,68,54,57,18,1
+ATH0231,Athlete_231,19,Male,Tennis,30,6,3,69,73,50,80,21,1
+ATH0232,Athlete_232,30,Male,Track & Field,29,16,4,65,79,66,95,4,0
+ATH0233,Athlete_233,23,Female,Soccer,25,1,2,79,82,74,99,26,1
+ATH0234,Athlete_234,18,Female,Soccer,6,7,4,73,64,61,63,11,1
+ATH0235,Athlete_235,26,Male,Soccer,12,1,0,52,92,62,56,18,1
+ATH0236,Athlete_236,19,Female,Soccer,17,11,0,100,83,51,96,23,1
+ATH0237,Athlete_237,21,Male,Track & Field,14,11,5,50,79,83,52,6,1
+ATH0238,Athlete_238,29,Female,Basketball,38,10,5,87,66,57,66,4,0
+ATH0239,Athlete_239,30,Male,Swimming,6,8,2,85,78,60,99,24,1
+ATH0240,Athlete_240,30,Female,Swimming,20,8,4,70,90,65,85,13,1
+ATH0241,Athlete_241,22,Male,Basketball,21,19,0,51,50,52,56,28,1
+ATH0242,Athlete_242,19,Male,Track & Field,25,6,2,93,77,70,99,21,1
+ATH0243,Athlete_243,20,Male,Soccer,8,2,4,55,87,70,71,13,1
+ATH0244,Athlete_244,25,Male,Tennis,10,11,1,79,93,59,80,1,0
+ATH0245,Athlete_245,31,Female,Swimming,38,17,3,68,85,74,90,19,1
+ATH0246,Athlete_246,27,Male,Swimming,31,9,2,72,89,65,79,0,0
+ATH0247,Athlete_247,21,Male,Track & Field,22,1,0,70,74,68,93,26,1
+ATH0248,Athlete_248,27,Male,Soccer,10,15,3,88,83,53,54,11,1
+ATH0249,Athlete_249,21,Female,Soccer,18,13,4,85,67,65,78,21,1
+ATH0250,Athlete_250,18,Male,Track & Field,37,7,4,99,60,81,68,29,1
+ATH0251,Athlete_251,31,Female,Soccer,19,13,0,66,73,98,92,24,1
+ATH0252,Athlete_252,31,Female,Swimming,35,3,3,88,65,56,87,6,1
+ATH0253,Athlete_253,18,Female,Swimming,37,8,0,59,85,58,79,29,1
+ATH0254,Athlete_254,18,Female,Track & Field,17,15,0,92,84,67,64,8,1
+ATH0255,Athlete_255,25,Male,Track & Field,29,16,5,80,58,59,64,10,1
+ATH0256,Athlete_256,20,Male,Swimming,9,17,4,83,82,62,66,7,1
+ATH0257,Athlete_257,30,Female,Tennis,30,6,2,90,75,83,82,26,1
+ATH0258,Athlete_258,34,Female,Basketball,34,13,1,99,65,65,69,4,0
+ATH0259,Athlete_259,22,Female,Soccer,40,6,3,90,53,84,64,0,0
+ATH0260,Athlete_260,33,Female,Soccer,37,4,2,52,70,65,64,9,1
+ATH0261,Athlete_261,27,Male,Tennis,24,3,2,70,59,94,50,24,1
+ATH0262,Athlete_262,22,Female,Track & Field,28,15,1,84,61,81,97,13,1
+ATH0263,Athlete_263,18,Male,Basketball,30,15,5,68,75,70,67,28,1
+ATH0264,Athlete_264,35,Male,Basketball,38,6,0,57,97,73,65,24,1
+ATH0265,Athlete_265,31,Male,Basketball,23,10,2,100,76,57,85,20,1
+ATH0266,Athlete_266,32,Male,Soccer,7,6,0,100,89,61,90,6,1
+ATH0267,Athlete_267,31,Female,Swimming,31,12,0,54,58,81,74,29,1
+ATH0268,Athlete_268,22,Female,Basketball,30,5,3,50,81,88,100,5,0
+ATH0269,Athlete_269,23,Female,Swimming,40,13,5,78,78,50,82,13,1
+ATH0270,Athlete_270,19,Female,Track & Field,18,13,5,100,81,79,67,9,1
+ATH0271,Athlete_271,24,Male,Soccer,9,14,5,51,82,61,59,9,1
+ATH0272,Athlete_272,20,Male,Tennis,24,3,2,99,79,65,87,30,1
+ATH0273,Athlete_273,27,Female,Tennis,33,17,1,99,92,68,57,18,1
+ATH0274,Athlete_274,23,Female,Soccer,8,15,0,70,91,58,82,13,1
+ATH0275,Athlete_275,24,Male,Swimming,35,11,1,69,59,100,52,13,1
+ATH0276,Athlete_276,25,Female,Track & Field,16,18,3,85,99,65,60,25,1
+ATH0277,Athlete_277,25,Female,Swimming,16,9,4,97,86,82,79,15,1
+ATH0278,Athlete_278,32,Female,Basketball,21,19,5,64,62,92,67,0,0
+ATH0279,Athlete_279,23,Male,Track & Field,38,5,5,86,57,64,61,3,0
+ATH0280,Athlete_280,26,Female,Swimming,32,8,4,86,79,95,98,28,1
+ATH0281,Athlete_281,35,Female,Tennis,14,5,4,70,73,98,80,28,1
+ATH0282,Athlete_282,33,Female,Soccer,11,9,1,79,68,80,67,11,1
+ATH0283,Athlete_283,18,Female,Swimming,10,3,1,89,67,74,80,4,0
+ATH0284,Athlete_284,21,Female,Track & Field,23,16,3,99,72,60,82,9,1
+ATH0285,Athlete_285,35,Female,Basketball,15,19,2,99,84,65,74,2,0
+ATH0286,Athlete_286,33,Male,Swimming,14,13,2,77,52,54,50,23,1
+ATH0287,Athlete_287,32,Male,Soccer,10,16,3,64,62,63,65,23,1
+ATH0288,Athlete_288,26,Female,Swimming,38,10,4,80,81,67,52,1,0
+ATH0289,Athlete_289,29,Female,Tennis,20,2,1,52,98,70,55,20,1
+ATH0290,Athlete_290,23,Female,Tennis,32,1,1,93,95,53,60,12,1
+ATH0291,Athlete_291,28,Male,Tennis,37,5,0,51,53,79,71,10,1
+ATH0292,Athlete_292,25,Male,Tennis,14,7,4,63,73,50,89,28,1
+ATH0293,Athlete_293,19,Female,Tennis,21,7,4,69,71,64,80,15,1
+ATH0294,Athlete_294,18,Male,Basketball,20,12,0,95,75,80,53,18,1
+ATH0295,Athlete_295,19,Female,Tennis,39,10,1,68,92,85,97,11,1
+ATH0296,Athlete_296,22,Male,Soccer,34,7,3,96,86,62,72,30,1
+ATH0297,Athlete_297,22,Female,Soccer,19,13,3,62,82,65,62,0,0
+ATH0298,Athlete_298,34,Male,Swimming,27,9,3,82,94,99,90,25,1
+ATH0299,Athlete_299,27,Male,Track & Field,12,4,2,62,59,93,94,28,1
+ATH0300,Athlete_300,31,Female,Swimming,6,9,0,56,93,54,65,5,0
+ATH0301,Athlete_301,31,Female,Tennis,35,6,1,83,90,79,73,0,0
+ATH0302,Athlete_302,24,Female,Track & Field,40,7,1,52,67,53,79,3,0
+ATH0303,Athlete_303,33,Female,Track & Field,17,15,2,69,77,77,98,7,1
+ATH0304,Athlete_304,28,Female,Soccer,18,8,1,85,55,69,98,21,1
+ATH0305,Athlete_305,35,Female,Tennis,38,15,2,86,93,57,86,24,1
+ATH0306,Athlete_306,21,Male,Basketball,13,19,1,66,63,67,57,1,0
+ATH0307,Athlete_307,20,Female,Basketball,22,8,1,100,58,59,72,23,1
+ATH0308,Athlete_308,35,Male,Soccer,27,1,1,66,93,57,79,3,0
+ATH0309,Athlete_309,21,Female,Tennis,24,11,5,57,66,89,69,19,1
+ATH0310,Athlete_310,29,Female,Track & Field,33,11,5,56,61,78,93,16,1
+ATH0311,Athlete_311,35,Female,Track & Field,34,20,3,55,78,87,51,18,1
+ATH0312,Athlete_312,20,Female,Track & Field,14,17,5,90,75,78,77,15,1
+ATH0313,Athlete_313,34,Female,Swimming,22,1,3,72,66,99,75,20,1
+ATH0314,Athlete_314,29,Male,Tennis,30,1,5,85,81,90,59,6,1
+ATH0315,Athlete_315,20,Female,Swimming,30,4,4,88,57,65,83,29,1
+ATH0316,Athlete_316,26,Female,Soccer,27,2,1,70,97,66,86,4,0
+ATH0317,Athlete_317,35,Male,Tennis,14,7,2,67,73,74,59,30,1
+ATH0318,Athlete_318,22,Female,Swimming,26,9,5,54,80,98,63,22,1
+ATH0319,Athlete_319,31,Female,Track & Field,6,11,3,71,87,67,56,14,1
+ATH0320,Athlete_320,18,Female,Soccer,13,6,2,60,98,58,97,13,1
+ATH0321,Athlete_321,18,Male,Swimming,37,19,0,85,82,80,80,19,1
+ATH0322,Athlete_322,22,Female,Tennis,9,19,5,68,53,52,84,5,0
+ATH0323,Athlete_323,25,Male,Swimming,19,8,0,68,83,98,80,0,0
+ATH0324,Athlete_324,19,Female,Tennis,38,17,3,52,94,75,54,16,1
+ATH0325,Athlete_325,24,Female,Soccer,29,2,4,82,51,90,65,24,1
+ATH0326,Athlete_326,27,Male,Swimming,7,9,4,92,62,84,54,19,1
+ATH0327,Athlete_327,30,Female,Basketball,40,2,0,58,83,76,56,24,1
+ATH0328,Athlete_328,24,Male,Swimming,24,5,5,83,53,95,78,4,0
+ATH0329,Athlete_329,30,Female,Track & Field,12,2,4,87,91,71,51,7,1
+ATH0330,Athlete_330,22,Female,Basketball,32,8,0,98,80,82,69,20,1
+ATH0331,Athlete_331,18,Male,Track & Field,16,19,5,95,67,89,77,27,1
+ATH0332,Athlete_332,21,Female,Swimming,19,1,5,80,94,52,62,27,1
+ATH0333,Athlete_333,34,Female,Track & Field,36,4,3,68,90,99,98,20,1
+ATH0334,Athlete_334,35,Male,Soccer,12,20,3,91,95,64,72,5,0
+ATH0335,Athlete_335,23,Female,Tennis,12,5,5,89,71,81,96,0,0
+ATH0336,Athlete_336,24,Male,Basketball,28,12,0,74,57,92,63,9,1
+ATH0337,Athlete_337,30,Male,Tennis,8,12,2,96,92,67,96,0,0
+ATH0338,Athlete_338,23,Female,Track & Field,24,14,3,76,94,86,77,7,1
+ATH0339,Athlete_339,20,Female,Basketball,32,16,1,72,68,83,85,18,1
+ATH0340,Athlete_340,27,Female,Track & Field,24,15,0,98,51,50,97,24,1
+ATH0341,Athlete_341,35,Male,Soccer,32,19,2,52,90,93,56,0,0
+ATH0342,Athlete_342,33,Male,Basketball,11,13,5,74,56,65,93,7,1
+ATH0343,Athlete_343,31,Female,Soccer,6,8,1,100,83,62,56,4,0
+ATH0344,Athlete_344,26,Male,Basketball,14,3,5,97,95,84,50,15,1
+ATH0345,Athlete_345,35,Female,Swimming,7,11,5,60,96,51,52,4,0
+ATH0346,Athlete_346,29,Female,Basketball,13,18,2,51,57,71,75,4,0
+ATH0347,Athlete_347,22,Female,Tennis,31,11,2,69,61,92,63,15,1
+ATH0348,Athlete_348,19,Female,Basketball,19,10,4,87,82,67,89,10,1
+ATH0349,Athlete_349,35,Male,Soccer,39,9,5,68,79,55,75,24,1
+ATH0350,Athlete_350,26,Male,Tennis,35,9,4,59,90,84,60,8,1
+ATH0351,Athlete_351,26,Female,Tennis,29,8,5,59,64,59,55,2,0
+ATH0352,Athlete_352,23,Female,Tennis,19,10,0,81,99,52,81,3,0
+ATH0353,Athlete_353,22,Female,Tennis,36,5,1,88,73,88,70,18,1
+ATH0354,Athlete_354,26,Male,Soccer,17,6,0,73,81,68,83,13,1
+ATH0355,Athlete_355,33,Male,Track & Field,16,13,5,93,76,98,80,21,1
+ATH0356,Athlete_356,25,Female,Track & Field,17,3,3,83,71,66,89,19,1
+ATH0357,Athlete_357,34,Female,Track & Field,17,14,2,50,93,86,84,1,0
+ATH0358,Athlete_358,31,Female,Swimming,17,1,4,88,81,87,68,22,1
+ATH0359,Athlete_359,30,Male,Track & Field,27,3,2,50,90,53,92,15,1
+ATH0360,Athlete_360,33,Female,Soccer,5,2,3,96,96,62,85,19,1
+ATH0361,Athlete_361,28,Female,Tennis,9,7,2,68,55,90,63,4,0
+ATH0362,Athlete_362,19,Female,Tennis,6,10,3,59,53,100,75,19,1
+ATH0363,Athlete_363,27,Male,Soccer,7,19,5,53,94,52,80,25,1
+ATH0364,Athlete_364,30,Male,Basketball,6,14,5,71,67,96,96,11,1
+ATH0365,Athlete_365,34,Male,Soccer,10,5,4,54,87,86,71,5,0
+ATH0366,Athlete_366,22,Male,Tennis,23,3,5,99,68,58,80,6,1
+ATH0367,Athlete_367,29,Female,Soccer,5,10,5,84,95,80,64,4,0
+ATH0368,Athlete_368,22,Female,Swimming,32,10,5,70,73,54,56,18,1
+ATH0369,Athlete_369,27,Female,Soccer,22,14,3,89,68,74,90,5,0
+ATH0370,Athlete_370,23,Male,Soccer,32,2,5,84,55,66,60,30,1
+ATH0371,Athlete_371,29,Male,Swimming,36,1,5,62,63,87,57,20,1
+ATH0372,Athlete_372,29,Female,Track & Field,35,16,1,88,90,65,59,15,1
+ATH0373,Athlete_373,34,Female,Track & Field,31,9,0,56,68,65,70,2,0
+ATH0374,Athlete_374,24,Female,Track & Field,25,1,5,92,93,63,77,26,1
+ATH0375,Athlete_375,33,Male,Basketball,21,11,2,71,62,82,65,17,1
+ATH0376,Athlete_376,25,Female,Tennis,30,9,0,92,93,86,69,1,0
+ATH0377,Athlete_377,27,Female,Track & Field,31,1,0,69,69,60,60,2,0
+ATH0378,Athlete_378,31,Male,Basketball,31,9,5,67,55,55,94,4,0
+ATH0379,Athlete_379,19,Female,Soccer,23,18,4,54,97,54,67,5,0
+ATH0380,Athlete_380,19,Female,Swimming,35,9,0,74,57,99,86,6,1
+ATH0381,Athlete_381,23,Female,Basketball,38,3,5,56,50,75,73,9,1
+ATH0382,Athlete_382,23,Male,Soccer,22,1,1,84,61,51,64,11,1
+ATH0383,Athlete_383,18,Female,Tennis,11,12,1,72,87,77,93,1,0
+ATH0384,Athlete_384,29,Female,Basketball,33,13,3,71,63,64,89,11,1
+ATH0385,Athlete_385,32,Male,Soccer,19,18,3,52,79,57,61,19,1
+ATH0386,Athlete_386,33,Male,Soccer,19,1,1,58,99,66,88,14,1
+ATH0387,Athlete_387,19,Female,Track & Field,32,16,1,73,93,83,77,30,1
+ATH0388,Athlete_388,20,Male,Tennis,14,4,4,96,57,89,96,20,1
+ATH0389,Athlete_389,31,Male,Basketball,24,15,1,70,52,59,94,22,1
+ATH0390,Athlete_390,33,Female,Tennis,28,12,1,85,76,75,51,5,0
+ATH0391,Athlete_391,32,Female,Track & Field,15,16,3,60,79,72,53,1,0
+ATH0392,Athlete_392,32,Female,Swimming,8,9,1,70,77,55,68,29,1
+ATH0393,Athlete_393,21,Female,Track & Field,25,6,2,91,98,87,88,5,0
+ATH0394,Athlete_394,22,Female,Basketball,21,4,3,79,84,71,73,14,1
+ATH0395,Athlete_395,20,Male,Swimming,21,20,4,61,96,79,93,22,1
+ATH0396,Athlete_396,29,Female,Soccer,29,1,4,56,81,87,79,13,1
+ATH0397,Athlete_397,18,Female,Soccer,40,17,4,93,82,85,71,6,1
+ATH0398,Athlete_398,18,Male,Tennis,9,18,5,90,54,72,53,2,0
+ATH0399,Athlete_399,31,Male,Soccer,23,12,5,70,98,56,98,1,0
+ATH0400,Athlete_400,24,Male,Swimming,17,6,4,82,80,95,82,17,1
+ATH0401,Athlete_401,19,Female,Basketball,29,5,2,51,50,55,90,8,1
+ATH0402,Athlete_402,19,Male,Tennis,11,11,1,68,77,69,64,20,1
+ATH0403,Athlete_403,34,Male,Track & Field,19,16,0,52,60,73,64,9,1
+ATH0404,Athlete_404,33,Female,Soccer,8,7,1,88,94,73,86,4,0
+ATH0405,Athlete_405,28,Male,Swimming,26,3,1,82,51,50,83,6,1
+ATH0406,Athlete_406,34,Female,Track & Field,6,2,2,65,56,52,56,19,1
+ATH0407,Athlete_407,22,Female,Track & Field,21,5,0,56,77,54,77,11,1
+ATH0408,Athlete_408,22,Female,Basketball,6,4,4,95,86,52,76,15,1
+ATH0409,Athlete_409,30,Male,Basketball,32,14,4,85,67,71,60,0,0
+ATH0410,Athlete_410,29,Male,Track & Field,38,11,5,79,52,80,100,8,1
+ATH0411,Athlete_411,18,Female,Swimming,30,8,3,52,65,52,90,30,1
+ATH0412,Athlete_412,24,Female,Soccer,9,2,1,51,53,87,75,30,1
+ATH0413,Athlete_413,35,Male,Track & Field,34,20,4,68,57,70,74,12,1
+ATH0414,Athlete_414,24,Male,Soccer,20,20,3,99,88,93,77,14,1
+ATH0415,Athlete_415,27,Male,Track & Field,18,13,0,68,61,77,55,3,0
+ATH0416,Athlete_416,22,Male,Track & Field,37,1,1,51,53,88,54,3,0
+ATH0417,Athlete_417,19,Male,Swimming,25,20,2,84,95,87,52,1,0
+ATH0418,Athlete_418,30,Male,Basketball,26,19,0,63,79,56,77,22,1
+ATH0419,Athlete_419,22,Male,Basketball,23,11,0,87,76,99,75,16,1
+ATH0420,Athlete_420,34,Male,Swimming,20,18,2,77,96,78,63,20,1
+ATH0421,Athlete_421,31,Male,Soccer,14,16,5,100,97,53,53,22,1
+ATH0422,Athlete_422,22,Female,Basketball,38,2,3,66,70,88,73,16,1
+ATH0423,Athlete_423,26,Male,Soccer,23,18,0,74,67,58,79,12,1
+ATH0424,Athlete_424,25,Male,Track & Field,9,7,4,75,55,50,79,17,1
+ATH0425,Athlete_425,19,Male,Swimming,14,6,1,58,71,51,95,19,1
+ATH0426,Athlete_426,19,Male,Track & Field,17,12,1,50,99,61,90,25,1
+ATH0427,Athlete_427,22,Male,Tennis,21,3,3,80,77,57,82,6,1
+ATH0428,Athlete_428,28,Male,Tennis,29,18,2,60,51,74,75,15,1
+ATH0429,Athlete_429,32,Male,Swimming,25,13,1,81,62,65,89,4,0
+ATH0430,Athlete_430,35,Male,Basketball,36,17,1,97,81,68,67,24,1
+ATH0431,Athlete_431,32,Female,Track & Field,21,1,0,70,81,79,70,7,1
+ATH0432,Athlete_432,31,Male,Swimming,36,3,0,55,64,76,88,0,0
+ATH0433,Athlete_433,35,Male,Basketball,37,1,2,53,96,100,74,28,1
+ATH0434,Athlete_434,33,Female,Swimming,36,8,1,92,53,57,78,13,1
+ATH0435,Athlete_435,19,Female,Basketball,9,9,3,89,57,81,96,17,1
+ATH0436,Athlete_436,28,Female,Soccer,34,12,1,86,50,90,79,2,0
+ATH0437,Athlete_437,30,Female,Tennis,11,4,3,62,86,54,74,23,1
+ATH0438,Athlete_438,27,Female,Swimming,40,20,1,88,90,75,97,19,1
+ATH0439,Athlete_439,27,Female,Soccer,39,17,3,55,74,100,51,23,1
+ATH0440,Athlete_440,35,Male,Track & Field,22,7,4,61,68,70,84,12,1
+ATH0441,Athlete_441,27,Male,Tennis,19,3,3,81,55,52,78,1,0
+ATH0442,Athlete_442,26,Male,Basketball,24,8,1,55,92,67,88,11,1
+ATH0443,Athlete_443,32,Female,Soccer,27,19,4,98,74,91,96,7,1
+ATH0444,Athlete_444,26,Male,Tennis,21,20,4,72,58,88,56,2,0
+ATH0445,Athlete_445,18,Male,Track & Field,7,7,0,72,71,93,76,24,1
+ATH0446,Athlete_446,28,Female,Swimming,15,3,5,89,72,66,64,21,1
+ATH0447,Athlete_447,18,Male,Soccer,10,6,2,63,97,79,72,30,1
+ATH0448,Athlete_448,21,Female,Basketball,33,8,5,90,98,94,84,22,1
+ATH0449,Athlete_449,25,Male,Basketball,31,3,5,53,92,86,62,25,1
+ATH0450,Athlete_450,30,Female,Swimming,26,14,5,88,83,99,57,14,1
+ATH0451,Athlete_451,30,Female,Basketball,19,1,0,71,86,86,81,19,1
+ATH0452,Athlete_452,20,Male,Basketball,21,8,5,79,86,65,65,26,1
+ATH0453,Athlete_453,33,Male,Soccer,29,16,0,59,82,98,61,21,1
+ATH0454,Athlete_454,32,Male,Track & Field,6,7,0,76,81,68,70,17,1
+ATH0455,Athlete_455,32,Male,Soccer,13,6,3,71,52,81,67,23,1
+ATH0456,Athlete_456,33,Male,Basketball,23,10,3,98,72,87,60,11,1
+ATH0457,Athlete_457,23,Male,Swimming,38,9,3,50,59,72,51,20,1
+ATH0458,Athlete_458,34,Female,Tennis,39,6,0,63,88,65,79,13,1
+ATH0459,Athlete_459,20,Female,Basketball,36,2,3,88,92,79,52,30,1
+ATH0460,Athlete_460,35,Female,Soccer,31,3,0,90,66,53,85,17,1
+ATH0461,Athlete_461,29,Male,Soccer,20,15,5,90,77,74,78,26,1
+ATH0462,Athlete_462,19,Female,Soccer,16,4,3,85,54,53,78,8,1
+ATH0463,Athlete_463,29,Female,Track & Field,29,7,1,63,84,67,74,3,0
+ATH0464,Athlete_464,18,Male,Basketball,39,3,2,85,90,58,98,9,1
+ATH0465,Athlete_465,28,Female,Soccer,9,15,3,84,72,99,68,8,1
+ATH0466,Athlete_466,24,Female,Soccer,39,18,0,90,63,78,63,4,0
+ATH0467,Athlete_467,20,Female,Track & Field,39,19,1,57,78,60,90,29,1
+ATH0468,Athlete_468,25,Male,Swimming,25,3,1,51,75,63,85,6,1
+ATH0469,Athlete_469,32,Male,Swimming,16,9,4,95,100,77,85,0,0
+ATH0470,Athlete_470,32,Male,Soccer,27,4,2,100,72,99,56,30,1
+ATH0471,Athlete_471,30,Female,Track & Field,39,6,4,66,61,79,88,12,1
+ATH0472,Athlete_472,27,Male,Swimming,19,19,1,98,84,62,74,4,0
+ATH0473,Athlete_473,24,Male,Tennis,13,1,1,75,94,57,68,18,1
+ATH0474,Athlete_474,22,Male,Soccer,17,10,2,66,67,97,93,6,1
+ATH0475,Athlete_475,22,Female,Swimming,11,11,0,94,66,100,67,18,1
+ATH0476,Athlete_476,19,Female,Tennis,23,13,5,62,78,51,50,10,1
+ATH0477,Athlete_477,30,Female,Soccer,21,10,2,86,68,53,52,9,1
+ATH0478,Athlete_478,27,Female,Swimming,15,14,1,52,66,84,62,14,1
+ATH0479,Athlete_479,32,Female,Swimming,23,3,3,95,90,81,70,19,1
+ATH0480,Athlete_480,22,Male,Tennis,21,17,2,70,69,97,96,13,1
+ATH0481,Athlete_481,28,Male,Basketball,10,15,0,85,72,93,54,6,1
+ATH0482,Athlete_482,31,Male,Basketball,5,4,1,87,70,100,87,3,0
+ATH0483,Athlete_483,34,Male,Track & Field,31,1,1,98,94,57,50,15,1
+ATH0484,Athlete_484,25,Female,Soccer,34,7,0,70,67,87,97,21,1
+ATH0485,Athlete_485,23,Female,Soccer,5,6,3,100,82,89,87,17,1
+ATH0486,Athlete_486,33,Male,Swimming,16,12,2,58,83,61,58,12,1
+ATH0487,Athlete_487,34,Female,Track & Field,28,14,3,78,52,65,78,8,1
+ATH0488,Athlete_488,18,Female,Soccer,26,11,0,99,77,92,79,5,0
+ATH0489,Athlete_489,33,Female,Tennis,28,18,2,87,59,54,66,4,0
+ATH0490,Athlete_490,19,Female,Track & Field,11,12,0,86,68,55,63,11,1
+ATH0491,Athlete_491,35,Male,Track & Field,40,4,5,64,72,91,97,2,0
+ATH0492,Athlete_492,35,Male,Track & Field,32,9,3,99,76,97,86,2,0
+ATH0493,Athlete_493,20,Female,Swimming,24,17,4,90,50,68,99,27,1
+ATH0494,Athlete_494,22,Male,Soccer,5,16,2,53,61,80,88,30,1
+ATH0495,Athlete_495,23,Female,Basketball,17,13,3,99,74,53,53,18,1
+ATH0496,Athlete_496,25,Female,Tennis,10,14,5,58,68,80,64,28,1
+ATH0497,Athlete_497,19,Female,Track & Field,22,10,5,97,60,83,100,30,1
+ATH0498,Athlete_498,28,Female,Tennis,26,18,4,51,97,64,93,2,0
+ATH0499,Athlete_499,23,Male,Swimming,11,17,3,57,87,65,66,8,1
+ATH0500,Athlete_500,18,Female,Basketball,10,12,4,69,52,59,96,28,1
