@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PromptShield — A Testing Framework for GenAI-related Data Leaks in FinTech</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0A0E1A;
+    --paper: #F4F1EB;
+    --accent: #D4380D;
+    --accent2: #1D4ED8;
+    --muted: #6B7280;
+    --card: #FFFFFF;
+    --border: #E5E0D6;
+    --mono: 'DM Mono', monospace;
+    --display: 'Syne', sans-serif;
+    --body: 'DM Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(244,241,235,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2.5rem; height: 56px;
+  }
+  .nav-logo {
+    font-family: var(--display); font-weight: 800; font-size: 1.1rem;
+    letter-spacing: 0.12em; color: var(--ink);
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .nav-logo .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); display: inline-block; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-family: var(--mono); font-size: 0.75rem; font-weight: 500;
+    color: var(--muted); text-decoration: none; letter-spacing: 0.08em;
+    text-transform: uppercase; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 7rem 2.5rem 4rem;
+    gap: 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background:
+      repeating-linear-gradient(0deg, transparent, transparent 59px, var(--border) 60px),
+      repeating-linear-gradient(90deg, transparent, transparent 59px, var(--border) 60px);
+    opacity: 0.4;
+  }
+  .hero-left { position: relative; z-index: 1; }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--ink); color: var(--paper);
+    font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.1em;
+    text-transform: uppercase; padding: 0.35rem 0.8rem; border-radius: 2px;
+    margin-bottom: 1.8rem;
+  }
+  .hero-tag .blink {
+    width: 6px; height: 6px; border-radius: 50%; background: #22C55E;
+    animation: blink 1.4s infinite;
+  }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+
+  h1 {
+    font-family: var(--display); font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 800; line-height: 1.0; letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+  }
+  h1 .strike {
+    position: relative; display: inline-block; color: var(--muted);
+  }
+  h1 .strike::after {
+    content: ''; position: absolute; left: 0; top: 50%;
+    width: 100%; height: 3px; background: var(--accent); transform: rotate(-2deg);
+  }
+  h1 .red { color: var(--accent); }
+
+  .hero-sub {
+    font-size: 1.05rem; color: #374151; max-width: 480px;
+    line-height: 1.7; margin-bottom: 2.5rem; font-weight: 300;
+  }
+  .hero-cta {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: var(--accent); color: #fff;
+    font-family: var(--display); font-weight: 700; font-size: 0.9rem;
+    letter-spacing: 0.04em; padding: 0.85rem 2rem; border-radius: 3px;
+    text-decoration: none; transition: transform 0.2s, background 0.2s;
+  }
+  .hero-cta:hover { background: #B91C1C; transform: translateY(-2px); }
+  .hero-cta .arrow { font-size: 1.1rem; }
+
+  .hero-right { position: relative; z-index: 1; }
+  .threat-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+  }
+  .threat-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 4px; padding: 1.2rem 1.4rem;
+    position: relative; overflow: hidden;
+    animation: fadeUp 0.6s ease both;
+  }
+  .threat-card::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+    width: 3px; background: var(--accent);
+  }
+  .threat-card:nth-child(even)::before { background: var(--accent2); }
+  .threat-card .letter {
+    font-family: var(--display); font-size: 2rem; font-weight: 800;
+    color: var(--border); line-height: 1; margin-bottom: 0.3rem;
+  }
+  .threat-card .name {
+    font-family: var(--mono); font-size: 0.7rem; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted);
+    margin-bottom: 0.2rem;
+  }
+  .threat-card .desc {
+    font-size: 0.8rem; color: #4B5563; line-height: 1.4;
+  }
+  @keyframes fadeUp {
+    from { opacity:0; transform: translateY(20px); }
+    to   { opacity:1; transform: translateY(0); }
+  }
+  .threat-card:nth-child(1){animation-delay:0.1s}
+  .threat-card:nth-child(2){animation-delay:0.2s}
+  .threat-card:nth-child(3){animation-delay:0.3s}
+  .threat-card:nth-child(4){animation-delay:0.4s}
+  .threat-card:nth-child(5){animation-delay:0.5s}
+  .threat-card:nth-child(6){animation-delay:0.6s}
+
+  /* ── SECTION BASE ── */
+  section { padding: 6rem 2.5rem; }
+  .section-label {
+    font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 0.8rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .section-label::before {
+    content: ''; display: inline-block; width: 24px; height: 1px; background: var(--accent);
+  }
+  h2 {
+    font-family: var(--display); font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.2rem;
+  }
+  .section-intro {
+    font-size: 1.05rem; color: #374151; max-width: 600px;
+    line-height: 1.75; font-weight: 300; margin-bottom: 3rem;
+  }
+
+  /* ── PROBLEM ── */
+  #problem { background: var(--ink); color: var(--paper); }
+  #problem .section-label { color: #F87171; }
+  #problem .section-label::before { background: #F87171; }
+  #problem h2 { color: var(--paper); }
+  #problem .section-intro { color: #9CA3AF; }
+
+  .problem-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+  }
+  .problem-card {
+    border: 1px solid #1F2937; border-radius: 4px; padding: 2rem 1.8rem;
+    position: relative;
+  }
+  .problem-num {
+    font-family: var(--display); font-size: 3.5rem; font-weight: 800;
+    color: #1F2937; line-height: 1; margin-bottom: 1rem;
+  }
+  .problem-title {
+    font-family: var(--display); font-size: 1.05rem; font-weight: 700;
+    margin-bottom: 0.6rem; color: var(--paper);
+  }
+  .problem-text { font-size: 0.88rem; color: #9CA3AF; line-height: 1.65; }
+  .problem-stat {
+    margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid #1F2937;
+    font-family: var(--mono); font-size: 0.75rem; color: #F87171;
+  }
+
+  /* ── HOW IT WORKS ── */
+  #how { background: var(--paper); }
+  .pillars { display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+  .pillar {
+    display: grid; grid-template-columns: 80px 1fr auto;
+    align-items: center; gap: 2rem; padding: 2rem 2.5rem;
+    background: var(--card); cursor: pointer;
+    transition: background 0.2s;
+  }
+  .pillar:hover { background: #FAFAF8; }
+  .pillar-num {
+    font-family: var(--display); font-size: 2.8rem; font-weight: 800;
+    color: var(--border); line-height: 1;
+  }
+  .pillar-body {}
+  .pillar-title {
+    font-family: var(--display); font-size: 1.15rem; font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+  .pillar-text { font-size: 0.9rem; color: #4B5563; line-height: 1.6; }
+  .pillar-tag {
+    font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em;
+    text-transform: uppercase; padding: 0.3rem 0.7rem; border-radius: 2px;
+    white-space: nowrap; align-self: flex-start; margin-top: 4px;
+  }
+  .tag-red { background: #FEF2F2; color: var(--accent); border: 1px solid #FECACA; }
+  .tag-blue { background: #EFF6FF; color: var(--accent2); border: 1px solid #BFDBFE; }
+  .tag-green { background: #F0FDF4; color: #15803D; border: 1px solid #BBF7D0; }
+
+  /* ── IMPACT ── */
+  #impact {
+    background: var(--ink); color: var(--paper);
+    position: relative; overflow: hidden;
+  }
+  #impact::before {
+    content: 'PromptShield';
+    position: absolute; right: -2rem; top: 50%; transform: translateY(-50%);
+    font-family: var(--display); font-size: 16rem; font-weight: 800;
+    color: #0F1626; line-height: 1; pointer-events: none; user-select: none;
+    white-space: nowrap;
+  }
+  #impact .section-label { color: #86EFAC; }
+  #impact .section-label::before { background: #86EFAC; }
+  #impact h2 { color: var(--paper); }
+  #impact .section-intro { color: #9CA3AF; }
+
+  .impact-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;
+    position: relative; z-index: 1;
+  }
+  .impact-card {
+    border: 1px solid #1F2937; border-radius: 4px; padding: 2rem;
+    background: rgba(255,255,255,0.03);
+  }
+  .impact-icon {
+    width: 44px; height: 44px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; margin-bottom: 1.2rem;
+  }
+  .ic-red   { background: rgba(239,68,68,0.15); }
+  .ic-blue  { background: rgba(59,130,246,0.15); }
+  .ic-green { background: rgba(34,197,94,0.15); }
+  .ic-amber { background: rgba(245,158,11,0.15); }
+  .impact-title {
+    font-family: var(--display); font-size: 1.05rem; font-weight: 700;
+    color: var(--paper); margin-bottom: 0.5rem;
+  }
+  .impact-text { font-size: 0.87rem; color: #9CA3AF; line-height: 1.65; }
+
+  /* ── FOOTER / CTA ── */
+  #cta {
+    background: var(--accent); color: #fff;
+    text-align: center; padding: 5rem 2.5rem;
+  }
+  #cta h2 {
+    color: #fff; font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 1rem;
+  }
+  #cta p { color: rgba(255,255,255,0.8); max-width: 520px; margin: 0 auto 2.5rem; font-size: 1rem; font-weight: 300; }
+  .cta-btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: #fff; color: var(--accent);
+    font-family: var(--display); font-weight: 700; font-size: 0.95rem;
+    padding: 0.9rem 2.2rem; border-radius: 3px; text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+  footer {
+    background: #060810; color: #374151;
+    font-family: var(--mono); font-size: 0.72rem;
+    padding: 1.5rem 2.5rem; display: flex;
+    justify-content: space-between; align-items: center;
+  }
+  footer span { letter-spacing: 0.06em; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    #hero { grid-template-columns: 1fr; padding-top: 6rem; }
+    .threat-grid { grid-template-columns: repeat(3, 1fr); }
+    .problem-grid { grid-template-columns: 1fr; }
+    .pillar { grid-template-columns: 48px 1fr; }
+    .pillar-tag { display: none; }
+    .impact-grid { grid-template-columns: 1fr; }
+    #impact::before { font-size: 8rem; top: auto; bottom: -1rem; right: 0; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo"><span class="dot"></span>PromptShield (PI: Lydia Manikonda)</div>
+  <ul class="nav-links">
+    <li><a href="#problem">Problem</a></li>
+    <li><a href="#how">Framework</a></li>
+    <li><a href="#impact">Impact</a></li>
+    <li><a href="#cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-left">
+    <div class="hero-tag"><span class="blink"></span> Active Research · FinTech Security</div>
+    <h1>Stop <span class="strike">trusting</span><br><span class="red">testing</span><br>your AI.</h1>
+    <p class="hero-sub">
+      A systematic testing framework for detecting GenAI data leaks in FinTech — using STRIDE threat modeling, canary tokens, and enforceable architectural policy.
+    </p>
+    <a href="#how" class="hero-cta">Explore the Framework <span class="arrow">→</span></a>
+  </div>
+  <div class="hero-right">
+    <div class="threat-grid">
+      <div class="threat-card">
+        <div class="letter">S</div>
+        <div class="name">Spoofing</div>
+        <div class="desc">Identity impersonation via crafted prompts</div>
+      </div>
+      <div class="threat-card">
+        <div class="letter">T</div>
+        <div class="name">Tampering</div>
+        <div class="desc">Corrupting model outputs or training context</div>
+      </div>
+      <div class="threat-card">
+        <div class="letter">R</div>
+        <div class="name">Repudiation</div>
+        <div class="desc">Erasing audit trails through LLM interactions</div>
+      </div>
+      <div class="threat-card">
+        <div class="letter">I</div>
+        <div class="name">Info Disclosure</div>
+        <div class="desc">Leaking PII, credentials, or system prompts</div>
+      </div>
+      <div class="threat-card">
+        <div class="letter">D</div>
+        <div class="name">Denial of Service</div>
+        <div class="desc">Resource exhaustion via adversarial inputs</div>
+      </div>
+      <div class="threat-card">
+        <div class="letter">E</div>
+        <div class="name">Privilege Escalation</div>
+        <div class="desc">Bypassing access controls via prompt injection</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="section-label">The Problem</div>
+  <h2>FinTech's AI blind spot.</h2>
+  <p class="section-intro">
+    Financial enterprises are deploying LLM-based systems faster than they can secure them. Existing security frameworks weren't designed for generative AI — leaving critical gaps that traditional tooling cannot see.
+  </p>
+  <div class="problem-grid">
+    <div class="problem-card">
+      <div class="problem-num">01</div>
+      <div class="problem-title">No LLM-Native Threat Models</div>
+      <div class="problem-text">Classic STRIDE was designed for deterministic software. Prompt-based systems introduce probabilistic, context-sensitive attack surfaces that existing tools miss entirely.</div>
+      <div class="problem-stat">⚠ Prompt injection is the #1 OWASP LLM risk</div>
+    </div>
+    <div class="problem-card">
+      <div class="problem-num">02</div>
+      <div class="problem-title">Invisible Data Leaks</div>
+      <div class="problem-text">LLMs can surface sensitive financial data — customer PII, proprietary models, internal policy — without triggering any existing Data Loss Prevention (DLP) or Security Information and Event Management (SIEM) alert. Leaks are silent by design.</div>
+      <div class="problem-stat">⚠ Canary token detection gap in all major AI platforms</div>
+    </div>
+    <div class="problem-card">
+      <div class="problem-num">03</div>
+      <div class="problem-title">Policy Without Enforcement</div>
+      <div class="problem-text">Most AI governance policies are advisory documents. There is no closed loop between discovered vulnerabilities and enforceable architectural guardrails in production systems.</div>
+      <div class="problem-stat">⚠ 78% of AI policies lack technical enforcement (Gartner)</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="section-label">The Framework</div>
+  <h2>Three pillars.<br>One closed loop.</h2>
+  <p class="section-intro">
+    PromptShield operates as an end-to-end testing pipeline — from threat discovery to policy enforcement — purpose-built for LLM-based enterprise systems in regulated industries.
+  </p>
+  <div class="pillars">
+    <div class="pillar">
+      <div class="pillar-num">01</div>
+      <div class="pillar-body">
+        <div class="pillar-title">STRIDE-LLM Threat Testing</div>
+        <div class="pillar-text">We adapt the STRIDE threat model for LLM-based architectures — using systematic prompt engineering to probe each threat category: identity spoofing via role injection, output tampering through context poisoning, information disclosure via extraction attacks, and privilege escalation through jailbreak sequences. Every test is reproducible and auditable.</div>
+      </div>
+      <div class="pillar-tag tag-red">Detect</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">02</div>
+      <div class="pillar-body">
+        <div class="pillar-title">Canary Token Detection</div>
+        <div class="pillar-text">We embed deterministic canary tokens — synthetic PII, fake credentials, and sentinel documents — into the system context. If any token surfaces in an LLM response, we get an unambiguous, zero-false-positive signal of unauthorized disclosure. No probabilistic heuristics. No alert fatigue.</div>
+      </div>
+      <div class="pillar-tag tag-blue">Trace</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">03</div>
+      <div class="pillar-body">
+        <div class="pillar-title">Policy-to-Architecture Translation</div>
+        <div class="pillar-text">Detected failures are not filed as tickets — they are translated directly into enforceable architectural controls: updated system prompts, retrieval filters, access control rules, and company-wide LLM adoption policies. The output is a living, versioned security baseline for safe GenAI deployment in FinTech.</div>
+      </div>
+      <div class="pillar-tag tag-green">Enforce</div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section id="impact">
+  <div class="section-label">Why It Matters</div>
+  <h2>Built for regulated<br>environments.</h2>
+  <p class="section-intro">PromptShield delivers outcomes that matter to every stakeholder — from CISO to compliance officer to engineering lead.</p>
+  <div class="impact-grid">
+    <div class="impact-card">
+      <div class="impact-icon ic-red">🛡️</div>
+      <div class="impact-title">Proactive Risk Reduction</div>
+      <div class="impact-text">Find boundary failures and policy violations before adversaries do — through controlled, systematic testing rather than incident response.</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-icon ic-blue">🔍</div>
+      <div class="impact-title">Deterministic Evidence</div>
+      <div class="impact-text">Canary token detections provide court-admissible, unambiguous evidence of data leakage — critical for regulatory reporting under GDPR, CCPA, and SOX.</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-icon ic-green">⚙️</div>
+      <div class="impact-title">Enforceable Governance</div>
+      <div class="impact-text">Close the gap between policy documents and production systems. Every finding generates a concrete architectural fix — not a recommendation, a control.</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-icon ic-amber">🏦</div>
+      <div class="impact-title">FinTech-First Design</div>
+      <div class="impact-text">Designed around the data sensitivity, regulatory constraints, and system architectures specific to financial services — not a generic AI security tool repurposed for finance.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <h2>Any suggestions?</h2>
+  <p>Always looking to collaborate with experts who can join us in building the security standard for responsible LLM adoption across financial enterprises.</p>
+  <a href="https://lmanikon.github.io/" class="cta-btn">Please reach out!</a>
+</section>
+
+<footer>
+  <span>PromptShield © 2026 — A Testing Framework for GenAI-related Data Leaks in FinTech</span>
+  <span> Lydia Manikonda . manikl@rpi.edu </span>
+  <span>FinTech · LLM Security · STRIDE · Canary Tokens</span>
+</footer>
+
+</body>
+</html>
