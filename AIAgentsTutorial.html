@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building AI Agents — A Beginner's Tutorial</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.75;
+      font-size: 17px;
+    }
+
+    /* HEADER */
+    header {
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: 2.5rem 2rem;
+    }
+    .header-inner {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .eyebrow {
+      font-family: monospace;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #aaaaaa;
+      margin-bottom: 0.5rem;
+    }
+    header h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: bold;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+    .subtitle {
+      font-size: 1rem;
+      color: #bbbbbb;
+      max-width: 560px;
+    }
+
+    /* NAV */
+    nav {
+      background: #f2f2f2;
+      border-bottom: 1px solid #cccccc;
+      padding: 0.6rem 2rem;
+    }
+    .nav-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      align-items: center;
+    }
+    .nav-label {
+      font-family: monospace;
+      font-size: 0.75rem;
+      color: #666666;
+      margin-right: 0.5rem;
+    }
+    nav a {
+      font-family: monospace;
+      font-size: 0.8rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      padding: 0.2rem 0.5rem;
+      border: 1px solid transparent;
+      border-radius: 3px;
+    }
+    nav a:hover {
+      border-color: #1a1a1a;
+      background: #1a1a1a;
+      color: #ffffff;
+    }
+
+    /* LAYOUT */
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2rem 2rem 5rem;
+    }
+
+    /* INTRO */
+    .intro-block {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: #f9f9f9;
+      border-left: 4px solid #555555;
+    }
+    .intro-block p + p { margin-top: 0.75rem; }
+
+    /* SECTION */
+    .section { margin-top: 3.5rem; }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #1a1a1a;
+    }
+    .section-num {
+      font-family: monospace;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: #888888;
+    }
+    .section h2 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .badge {
+      margin-left: auto;
+      font-family: monospace;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+    .badge-original { background: #e6f4ea; color: #2e7d32; border: 1px solid #2e7d32; }
+    .badge-new      { background: #fff3e0; color: #e65100; border: 1px solid #e65100; }
+
+    /* CONCEPT BOX */
+    .concept {
+      background: #1a1a1a;
+      color: #e8e8e8;
+      padding: 1.1rem 1.4rem;
+      margin: 1.25rem 0;
+    }
+    .concept-label {
+      font-family: monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #aaaaaa;
+      margin-bottom: 0.35rem;
+    }
+    .concept p { font-size: 0.93rem; line-height: 1.65; color: #cccccc; }
+
+    /* HOW IT WORKS */
+    .how-it-works {
+      display: flex;
+      gap: 0;
+      margin: 1.5rem 0;
+      border: 1px solid #cccccc;
+    }
+    .how-step {
+      flex: 1;
+      padding: 1rem 1.1rem;
+      border-right: 1px solid #cccccc;
+      font-size: 0.88rem;
+    }
+    .how-step:last-child { border-right: none; }
+    .how-step-num {
+      font-family: Arial, sans-serif;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #555555;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    .how-step strong {
+      font-size: 0.85rem;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    /* CODE BLOCK */
+    .code-wrap {
+      margin: 1.5rem 0;
+      border: 1px solid #cccccc;
+      overflow: hidden;
+    }
+    .code-header {
+      background: #2a2a2a;
+      padding: 0.4rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .code-title {
+      font-family: monospace;
+      font-size: 0.75rem;
+      color: #aaaaaa;
+    }
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 1.25rem 1.5rem;
+      overflow-x: auto;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.83rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+    .kw  { color: #c792ea; }
+    .st  { color: #c3e88d; }
+    .cm  { color: #6a9955; font-style: italic; }
+    .fn  { color: #82aaff; }
+    .cl  { color: #ffcb6b; }
+    .nb  { color: #f78c6c; }
+    .op  { color: #89ddff; }
+    .dt  { color: #f78c6c; }
+
+    /* OUTPUT BOX */
+    .output-block {
+      margin: 0.25rem 0 1.5rem;
+      border: 1px solid #cccccc;
+      border-top: none;
+    }
+    .output-label {
+      background: #f2f2f2;
+      border-bottom: 1px solid #cccccc;
+      padding: 0.3rem 1rem;
+      font-family: monospace;
+      font-size: 0.7rem;
+      color: #666666;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .output-content {
+      background: white;
+      padding: 0.9rem 1.4rem;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.83rem;
+      color: #333333;
+      line-height: 1.6;
+    }
+
+    /* CALLOUTS */
+    .callout {
+      padding: 0.9rem 1.1rem;
+      margin: 1.1rem 0;
+      font-size: 0.9rem;
+    }
+    .callout-tip   { background: #f0f7f0; border: 1px solid #a8d5b8; }
+    .callout-warn  { background: #fffbf0; border: 1px solid #f0c87a; }
+    .callout-info  { background: #f0f3fa; border: 1px solid #a8b4d5; }
+
+    /* MISC */
+    .divider {
+      border: none;
+      border-top: 1px solid #dddddd;
+      margin: 3rem 0;
+    }
+    footer {
+      background: #1a1a1a;
+      color: #888888;
+      text-align: center;
+      padding: 1.5rem;
+      font-family: monospace;
+      font-size: 0.75rem;
+    }
+    .install-strip {
+      background: #f2f2f2;
+      border: 1px solid #cccccc;
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .install-label {
+      font-family: monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      color: #666666;
+    }
+    .install-cmd {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.85rem;
+      background: #1a1a1a;
+      color: #d4d4d4;
+      padding: 0.25rem 0.6rem;
+      border-radius: 3px;
+    }
+
+    p + p { margin-top: 0.75rem; }
+    p + ul, p + ol { margin-top: 0.5rem; }
+    ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+    li { margin-bottom: 0.3rem; }
+    code { font-family: 'Courier New', Courier, monospace; font-size: 0.88em; background: #f2f2f2; padding: 0.1em 0.3em; border-radius: 2px; }
+
+    @media (max-width: 620px) {
+      .how-it-works { flex-direction: column; }
+      .how-step { border-right: none; border-bottom: 1px solid #cccccc; }
+      .how-step:last-child { border-bottom: none; }
+      .section-header { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <p class="eyebrow">Hands-On Tutorial by Lydia Manikonda using OpenAI Agents SDK</p>
+    <h1>Building AI Agents From Scratch using OpenAI Agents SDK</h1>
+    <p class="subtitle">A beginner-friendly guide to creating, running, and chaining intelligent agents with the OpenAI Agents SDK. </p>
+    <p class="subtitle">Primarily built this for my students in MGMT 6560/4190 -- Introduction to Machine Learning Applications, Lally School of Management, Rensselaer Polytechnic Institute (RPI).</p>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav aria-label="Table of contents">
+  <div class="nav-inner">
+    <span class="nav-label">Jump to:</span>
+    <a href="#setup">Setup</a>
+    <a href="#triage">1 · Triage Agent</a>
+    <a href="#tool-use">2 · Tool-Use Agent</a>
+    <a href="#memory">3 · Memory Agent</a>
+    <a href="#pipeline">4 · Pipeline Agent</a>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main>
+
+  <!-- INTRO -->
+  <div class="intro-block">
+    <p>An <strong>AI agent</strong> is a program that uses a large language model (LLM) as its reasoning engine to decide what to do next — then acts on that decision, either by producing a response, calling a tool, or handing off to another agent.</p>
+    <p>This tutorial uses <strong>OpenAI's Agents SDK</strong> (<code>openai-agents</code>), a lightweight Python library built on top of the OpenAI API that provides everything you need to build, chain, and run agents without boilerplate.</p>
+    <p>No prior experience with AI frameworks is required — just a working Python environment via Jupyter notebooks and an OpenAI API key.</p>
+  </div>
+
+  <!-- SETUP -->
+  <section class="section" id="setup">
+    <div class="section-header">
+      <span class="section-num">Prerequisites</span>
+      <h2>Installation &amp; Setup</h2>
+    </div>
+
+    <p>Install both packages. The <code>openai</code> package is the base client; <code>openai-agents</code> adds the agent orchestration layer on top.</p>
+
+    <div class="install-strip">
+      <span class="install-label">Install</span>
+      <code class="install-cmd">pip install openai</code>
+      <code class="install-cmd">pip install openai-agents</code>
+    </div>
+
+    <div class="callout callout-warn">
+	    <div>I prefer Jupyter notebooks -- so use the following statements in a cell before you run the following examples. <br>
+		    <code>import os <br>from openai import OpenAI<br> os.environ['OPENAI_API_KEY'] = key</code>
+		</div>
+      <div>If you dont prefer the previous way, you can set your OpenAI API key as an environment variable before running any of the examples:<br>
+      <code>export OPENAI_API_KEY=key</code> (macOS/Linux) or add it to your <code>.env</code> file.</div>
+    </div>
+
+    <p>Every example in this tutorial follows the same three-step pattern:</p>
+    <div class="how-it-works">
+      <div class="how-step"><span class="how-step-num">1</span><strong>Define</strong>Create one or more <code>Agent</code> objects with a name, instructions, and optional tools or handoffs.</div>
+      <div class="how-step"><span class="how-step-num">2</span><strong>Run</strong>Call <code>await Runner.run(agent, input="...")</code> to start execution.</div>
+      <div class="how-step"><span class="how-step-num">3</span><strong>Read</strong>Inspect <code>result.final_output</code> for the agent's answer.</div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- SECTION 1 — TRIAGE -->
+  <section class="section" id="triage">
+    <div class="section-header">
+      <span class="section-num">Agent Type 01</span>
+      <h2>Triage (Handoff) Agent</h2>
+      <span class="badge badge-original">Original</span>
+    </div>
+
+    <div class="concept">
+      <p class="concept-label">What is it?</p>
+      <p>A <strong>triage agent</strong> acts as a router. It reads the incoming request and decides which specialist sub-agent is best qualified to handle it, then <em>hands off</em> the conversation seamlessly. This is the "receptionist" pattern — one entry point, many experts behind the scenes.</p>
+    </div>
+
+    <p>In the example below we build three agents: a Spanish-only agent, an English-only agent, and a triage agent that inspects the language of each message and routes accordingly.</p>
+
+    <div class="code-wrap">
+      <div class="code-header">
+        <span class="code-title">triage_agent.ipynb</span>
+      </div>
+<pre><span class="kw">from</span> agents <span class="kw">import</span> <span class="cl">Agent</span>, <span class="cl">Runner</span>
+
+<span class="cm"># Two specialist agents — each speaks only one language</span>
+spanish_agent <span class="op">=</span> <span class="cl">Agent</span>(
+    name<span class="op">=</span><span class="st">"Spanish agent"</span>,
+    instructions<span class="op">=</span><span class="st">"You only speak Spanish."</span>,
+)
+
+english_agent <span class="op">=</span> <span class="cl">Agent</span>(
+    name<span class="op">=</span><span class="st">"English agent"</span>,
+    instructions<span class="op">=</span><span class="st">"You only speak English."</span>,
+)
+
+<span class="cm"># The triage agent routes to the correct specialist</span>
+triage_agent <span class="op">=</span> <span class="cl">Agent</span>(
+    name<span class="op">=</span><span class="st">"Triage agent"</span>,
+    instructions<span class="op">=</span><span class="st">"Handoff to the appropriate agent based on the language of the request."</span>,
+    handoffs<span class="op">=</span>[spanish_agent, english_agent],
+)
+
+<span class="kw">async def</span> <span class="fn">main</span>():
+    <span class="cm"># Spanish input → goes to spanish_agent</span>
+    result <span class="op">=</span> <span class="kw">await</span> <span class="cl">Runner</span>.run(triage_agent, input<span class="op">=</span><span class="st">"Hola, ¿cómo estás?"</span>)
+    <span class="nb">print</span>(result.final_output)
+
+    <span class="cm"># English input → goes to english_agent</span>
+    result <span class="op">=</span> <span class="kw">await</span> <span class="cl">Runner</span>.run(triage_agent, input<span class="op">=</span><span class="st">"Hello, how are you?"</span>)
+    <span class="nb">print</span>(result.final_output)
+
+    <span class="cm"># Directly calling spanish_agent with English input</span>
+    result <span class="op">=</span> <span class="kw">await</span> <span class="cl">Runner</span>.run(spanish_agent, input<span class="op">=</span><span class="st">"Hello, how are you?"</span>)
+    <span class="nb">print</span>(result.final_output)
+
+<span class="kw">await</span> <span class="fn">main</span>()</pre>
+    </div>
+
+    <div class="output-block">
+      <div class="output-label">Expected Output</div>
+      <div class="output-content">¡Hola! Estoy bien, gracias. ¿Y tú?<br>Hello! I'm doing well, thank you. How are you?<br>¡Hola! Estoy bien, gracias. ¿Y tú?</div>
+    </div>
+
+    <div class="callout callout-tip">
+      <div><strong>Key concept:</strong> The <code>handoffs</code> parameter is a list of agents that the current agent is allowed to delegate to. The LLM chooses which one to pick based on the instructions and the input.</div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- SECTION 2 — TOOL USE -->
+  <section class="section" id="tool-use">
+    <div class="section-header">
+      <span class="section-num">Agent Type 02</span>
+      <h2>Tool-Use Agent</h2>
+      <span class="badge badge-new">New</span>
+    </div>
+
+    <div class="concept">
+      <p class="concept-label">What is it?</p>
+      <p>A <strong>tool-use agent</strong> can call external functions — like fetching live data, querying a database, or doing math — and weave the results into its response. The LLM decides <em>when</em> to call a tool and <em>what arguments</em> to pass. You just define the function and decorate it.</p>
+    </div>
+
+    <p>The SDK makes adding tools effortless: decorate any Python function with <code>@function_tool</code> and the agent automatically discovers it, understands its purpose from the docstring, and calls it when needed.</p>
+
+    <div class="how-it-works">
+      <div class="how-step"><span class="how-step-num">1</span><strong>Define a tool</strong>Write a regular Python function and add <code>@function_tool</code>.</div>
+      <div class="how-step"><span class="how-step-num">2</span><strong>Attach it</strong>Pass the function to the agent via <code>tools=[...]</code>.</div>
+      <div class="how-step"><span class="how-step-num">3</span><strong>Let it run</strong>The agent decides when to call the tool and incorporates the result.</div>
+    </div>
+
+    <div class="code-wrap">
+      <div class="code-header">
+        <span class="code-title">tool_use_agent.ipynb</span>
+      </div>
+<pre><span class="kw">from</span> agents <span class="kw">import</span> <span class="cl">Agent</span>, <span class="cl">Runner</span>, function_tool
+<span class="kw">import</span> datetime
+
+<span class="cm"># ── Define tools ──────────────────────────────────────────</span>
+
+<span class="op">@</span>function_tool
+<span class="kw">def</span> <span class="fn">get_current_time</span>(city: <span class="dt">str</span>) <span class="op">-></span> <span class="dt">str</span>:
+    <span class="st">"""Return the current UTC time. City is accepted but we use UTC for simplicity."""</span>
+    now <span class="op">=</span> datetime.datetime.utcnow().strftime(<span class="st">"%H:%M:%S UTC"</span>)
+    <span class="kw">return</span> <span class="nb">f</span><span class="st">"The current time (UTC) is </span>{now}<span class="st">."</span>
+
+<span class="op">@</span>function_tool
+<span class="kw">def</span> <span class="fn">calculate</span>(expression: <span class="dt">str</span>) <span class="op">-></span> <span class="dt">str</span>:
+    <span class="st">"""Evaluate a simple arithmetic expression and return the result."""</span>
+    <span class="kw">try</span>:
+        result <span class="op">=</span> <span class="nb">eval</span>(expression, {<span class="st">"__builtins__"</span>: {}})
+        <span class="kw">return</span> <span class="nb">f</span><span class="st">"</span>{expression}<span class="st"> = </span>{result}<span class="st">"</span>
+    <span class="kw">except</span> <span class="cl">Exception</span> <span class="kw">as</span> e:
+        <span class="kw">return</span> <span class="nb">f</span><span class="st">"Error: </span>{e}<span class="st">"</span>
+
+<span class="cm"># ── Create the agent with tools ───────────────────────────</span>
+assistant <span class="op">=</span> <span class="cl">Agent</span>(
+    name<span class="op">=</span><span class="st">"Assistant"</span>,
+    instructions<span class="op">=</span><span class="st">"You are a helpful assistant. Use your tools whenever a question requires live data or calculation."</span>,
+    tools<span class="op">=</span>[get_current_time, calculate],
+)
+
+<span class="kw">async def</span> <span class="fn">main</span>():
+    result <span class="op">=</span> <span class="kw">await</span> <span class="cl">Runner</span>.run(assistant, input<span class="op">=</span><span class="st">"What time is it in London?"</span>)
+    <span class="nb">print</span>(result.final_output)
+
+    result <span class="op">=</span> <span class="kw">await</span> <span class="cl">Runner</span>.run(assistant, input<span class="op">=</span><span class="st">"What is 1492 multiplied by 33?"</span>)
+    <span class="nb">print</span>(result.final_output)
+
+<span class="kw">await</span> <span class="fn">main</span>()</pre>
+    </div>
+
+    <div class="output-block">
+      <div class="output-label">Expected Output</div>
+      <div class="output-content">The current time in London is 14:32:07 UTC.<br>1492 × 33 = 49,236.</div>
+    </div>
+
+    <div class="callout callout-tip">
+      <div><strong>Key concept:</strong> The agent reads the function's <strong>docstring</strong> to understand what a tool does. Write clear, descriptive docstrings — they are the tool's "instructions" to the model.</div>
+    </div>
+
+    <div class="callout callout-warn">
+      <div>Using <code>eval()</code> in production code is a security risk. In a real application, replace it with a proper math parser like <code>simpleeval</code> or <code>asteval</code>.</div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- SECTION 3 — MEMORY AGENT -->
+  <section class="section" id="memory">
+    <div class="section-header">
+      <span class="section-num">Agent Type 03</span>
+      <h2>Conversational Memory Agent</h2>
+      <span class="badge badge-new">New</span>
+    </div>
+
+    <div class="concept">
+      <p class="concept-label">What is it?</p>
+      <p>By default, each call to <code>Runner.run()</code> is stateless — the agent has no memory of previous turns. A <strong>memory agent</strong> solves this by manually maintaining a <em>conversation history</em> (a list of message dicts) and passing it into every call. The agent can then refer back to what was said earlier in the session.</p>
+    </div>
+
+    <p>This pattern is essential for chatbots, tutors, or any use case where context accumulates over multiple exchanges.</p>
+
+    <div class="how-it-works">
+      <div class="how-step"><span class="how-step-num">1</span><strong>Keep a list</strong>Maintain a <code>history</code> list of <code>{"role": ..., "content": ...}</code> dicts.</div>
+      <div class="how-step"><span class="how-step-num">2</span><strong>Append each turn</strong>Add the user message, then the agent's reply after each run.</div>
+      <div class="how-step"><span class="how-step-num">3</span><strong>Pass history in</strong>Feed the full <code>history</code> as the <code>input</code> on the next call.</div>
+    </div>
+
+    <div class="code-wrap">
+      <div class="code-header">
+        <span class="code-title">memory_agent.ipynb</span>
+      </div>
+<pre><span class="kw">from</span> agents <span class="kw">import</span> <span class="cl">Agent</span>, <span class="cl">Runner</span>
+
+tutor <span class="op">=</span> <span class="cl">Agent</span>(
+    name<span class="op">=</span><span class="st">"Tutor"</span>,
+    instructions<span class="op">=</span>(
+        <span class="st">"You are a patient Python tutor. Remember what the student has already learned "</span>
+        <span class="st">"in this session and build on it. Keep explanations short and encouraging."</span>
+    ),
+)
+
+<span class="kw">async def</span> <span class="fn">chat</span>(history: list, user_message: <span class="dt">str</span>) <span class="op">-></span> <span class="dt">str</span>:
+    <span class="cm"># Add the new user message to history</span>
+    history.append({<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: user_message})
+
+    <span class="cm"># Run the agent with the full conversation history as input</span>
+    result <span class="op">=</span> <span class="kw">await</span> <span class="cl">Runner</span>.run(tutor, input<span class="op">=</span>history)
+    reply <span class="op">=</span> result.final_output
+
+    <span class="cm"># Append the agent's reply so the next call has full context</span>
+    history.append({<span class="st">"role"</span>: <span class="st">"assistant"</span>, <span class="st">"content"</span>: reply})
+    <span class="kw">return</span> reply
+
+<span class="kw">async def</span> <span class="fn">main</span>():
+    history <span class="op">=</span> []   <span class="cm"># Start with an empty conversation</span>
+
+    reply1 <span class="op">=</span> <span class="kw">await</span> <span class="fn">chat</span>(history, <span class="st">"Hi! I'm new to Python. What's a variable?"</span>)
+    <span class="nb">print</span>(<span class="nb">f</span><span class="st">"Tutor: </span>{reply1}<span class="st">\n"</span>)
+
+    reply2 <span class="op">=</span> <span class="kw">await</span> <span class="fn">chat</span>(history, <span class="st">"Got it. Now, what's a list and how is it different?"</span>)
+    <span class="nb">print</span>(<span class="nb">f</span><span class="st">"Tutor: </span>{reply2}<span class="st">\n"</span>)
+
+    <span class="cm"># The tutor remembers we started with variables</span>
+    reply3 <span class="op">=</span> <span class="kw">await</span> <span class="fn">chat</span>(history, <span class="st">"Can I store a list inside a variable?"</span>)
+    <span class="nb">print</span>(<span class="nb">f</span><span class="st">"Tutor: </span>{reply3}<span class="st">\n"</span>)
+
+<span class="kw">await</span> <span class="fn">main</span>()</pre>
+    </div>
+
+    <div class="output-block">
+      <div class="output-label">Expected Output (abbreviated)</div>
+      <div class="output-content"> Tutor: Hello! Great question. A **variable** in Python is like a container that...<br><br> Tutor: Excellent question! A **list** in Python is a variable that can store multiple values in one place,...<br><br>Tutor: Absolutely! In fact, that's exactly what you're doing when you assign a list to a variable. For example: python...</div>
+    </div>
+
+    <div class="callout callout-info">
+	    <div>Note that these are stochastic models -- so you may not see the same exact output as I got when I ran this code on my end. <br><strong>Context window limits:</strong> History grows with each turn. For long sessions, implement a trimming strategy (e.g., keep only the last <em>N</em> messages) so you don't exceed the model's context window.</div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- SECTION 4 — PIPELINE AGENT -->
+  <section class="section" id="pipeline">
+    <div class="section-header">
+      <span class="section-num">Agent Type 04</span>
+      <h2>Sequential Pipeline Agent</h2>
+      <span class="badge badge-new">New</span>
+    </div>
+
+    <div class="concept">
+      <p class="concept-label">What is it?</p>
+      <p>A <strong>pipeline agent</strong> chains multiple specialist agents together in a fixed sequence — the output of one becomes the input of the next. Each agent does one focused job, and together they complete a complex multi-step task. Think of it as an assembly line for text processing.</p>
+    </div>
+
+    <p>The example below builds a three-stage writing pipeline: a <em>drafting agent</em> writes a rough blog post, a <em>critic agent</em> identifies weaknesses, and an <em>editor agent</em> produces a polished final version — all automatically, from a single topic prompt.</p>
+
+    <div class="how-it-works">
+      <div class="how-step"><span class="how-step-num">1</span><strong>Stage 1 · Draft</strong>The drafting agent turns a topic into a rough blog post.</div>
+      <div class="how-step"><span class="how-step-num">2</span><strong>Stage 2 · Critique</strong>The critic agent reviews the draft and lists improvements.</div>
+      <div class="how-step"><span class="how-step-num">3</span><strong>Stage 3 · Edit</strong>The editor agent applies the feedback to produce a final piece.</div>
+    </div>
+
+    <div class="code-wrap">
+      <div class="code-header">
+        <span class="code-title">pipeline_agent.ipynb</span>
+      </div>
+<pre><span class="kw">from</span> agents <span class="kw">import</span> <span class="cl">Agent</span>, <span class="cl">Runner</span>
+
+<span class="cm"># ── Stage 1: Drafter ──────────────────────────────────────</span>
+drafter <span class="op">=</span> <span class="cl">Agent</span>(
+    name<span class="op">=</span><span class="st">"Drafter"</span>,
+    instructions<span class="op">=</span>(
+        <span class="st">"You are a blog writer. Given a topic, write a short 3-paragraph blog post. "</span>
+        <span class="st">"Be informative but conversational. Do not polish — this is a rough draft."</span>
+    ),
+)
+
+<span class="cm"># ── Stage 2: Critic ───────────────────────────────────────</span>
+critic <span class="op">=</span> <span class="cl">Agent</span>(
+    name<span class="op">=</span><span class="st">"Critic"</span>,
+    instructions<span class="op">=</span>(
+        <span class="st">"You are a sharp editor. Review the given draft and list exactly 3 specific, "</span>
+        <span class="st">"actionable improvements. Be concise — use bullet points."</span>
+    ),
+)
+
+<span class="cm"># ── Stage 3: Editor ───────────────────────────────────────</span>
+editor <span class="op">=</span> <span class="cl">Agent</span>(
+    name<span class="op">=</span><span class="st">"Editor"</span>,
+    instructions<span class="op">=</span>(
+        <span class="st">"You are a professional editor. You will receive a draft and a list of critique points. "</span>
+        <span class="st">"Rewrite the draft addressing all critique points. Output only the final polished post."</span>
+    ),
+)
+
+<span class="kw">async def</span> <span class="fn">run_pipeline</span>(topic: <span class="dt">str</span>) <span class="op">-></span> <span class="dt">str</span>:
+    <span class="cm"># Stage 1 — Generate draft</span>
+    draft_result <span class="op">=</span> <span class="kw">await</span> <span class="cl">Runner</span>.run(drafter, input<span class="op">=</span>topic)
+    draft <span class="op">=</span> draft_result.final_output
+    <span class="nb">print</span>(<span class="st">"Draft complete\n"</span>)
+
+    <span class="cm"># Stage 2 — Critique the draft</span>
+    critique_result <span class="op">=</span> <span class="kw">await</span> <span class="cl">Runner</span>.run(critic, input<span class="op">=</span>draft)
+    critique <span class="op">=</span> critique_result.final_output
+    <span class="nb">print</span>(<span class="st">"Critique complete\n"</span>)
+
+    <span class="cm"># Stage 3 — Edit using the draft + critique together</span>
+    combined <span class="op">=</span> <span class="nb">f</span><span class="st">"DRAFT:\n</span>{draft}<span class="st">\n\nCRITIQUE:\n</span>{critique}<span class="st">"</span>
+    final_result <span class="op">=</span> <span class="kw">await</span> <span class="cl">Runner</span>.run(editor, input<span class="op">=</span>combined)
+    <span class="nb">print</span>(<span class="st">"Final edit complete\n"</span>)
+
+    <span class="kw">return</span> final_result.final_output
+
+<span class="kw">async def</span> <span class="fn">main</span>():
+    final_post <span class="op">=</span> <span class="kw">await</span> <span class="fn">run_pipeline</span>(<span class="st">"Why learning to code is still valuable in the age of AI"</span>)
+    <span class="nb">print</span>(<span class="st">"── FINAL Result ──────────────────────────────────────\n"</span>)
+    <span class="nb">print</span>(final_post)
+
+<span class="kw">await</span> <span class="fn">main</span>()</pre>
+    </div>
+
+    <div class="output-block">
+      <div class="output-label">Expected Output (abbreviated)</div>
+      <div class="output-content">Draft complete<br>Critique complete<br>Final edit complete<br><br>── FINAL POST ──────────────────────────────────────<br><br>Every week brings a fresh headline about artificial intelligence getting smarter. With tools like ChatGPT, Copilot, and AI-powered design platforms becoming more capable, it’s natural to wonder: is learning to code still worth the effort?...</div>
+    </div>
+
+    <div class="callout callout-tip">
+	    <div>As I mentioned in the previous example's note these are stochastic models so output may vary for each run. So dont panic if you dont see the same exact output when you run this code. <br><strong>Key concept:</strong> Each agent in a pipeline should have a <strong>single, well-defined job</strong>. Trying to make one agent do everything usually produces worse results than splitting responsibilities across focused stages.</div>
+    </div>
+
+    <div class="callout callout-info">
+	    <div><strong>Going further:</strong> You can combine all four patterns — e.g., a triage agent that routes to a pipeline that uses tools and maintains memory. Hope this tutorial helps and please reach out to me if you have any questions. Again, please note that I have implemented these in Jupyter notebooks and if you are using a different way to execute these codes, they may need slight modifications. <br> Also, the SDK updates constantly -- so certain commands may slightly change. Good luck!</div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- SUMMARY TABLE -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">Summary</span>
+      <h2>Choosing the Right Agent Type</h2>
+    </div>
+    <p>Use this quick reference to decide which pattern fits your use case:</p>
+
+    <div class="code-wrap" style="margin-top:1.25rem;">
+      <div class="code-header">
+        <span class="code-title">quick reference</span>
+      </div>
+<pre><span class="cm">Pattern           When to use</span>
+<span class="cm">────────────────────────────────────────────────────────────</span>
+<span class="cl">Triage Agent</span>      Route different request types to specialists
+<span class="cl">Tool-Use Agent</span>    Need live data, APIs, math, or external actions
+<span class="cl">Memory Agent</span>      Multi-turn conversations that need context
+<span class="cl">Pipeline Agent</span>    Complex tasks that benefit from staged processing</pre>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+	There are so many resources online. Hope this is a useful tutorial for you. <br>
+	      AI Agents Tutorial for Beginners · Requirements -- OpenAI Agents SDK · openai-agents + Python 3.10+ <br>
+		    Questions or Comments? Please reach out via email: manikl@rpi.edu.<br>
+		    Updated on April 10, 2026 
+</footer>
+
+</body>
+</html>
